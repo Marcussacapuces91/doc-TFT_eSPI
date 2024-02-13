@@ -1,10 +1,9 @@
 Classe
 ======
 
-.. autosummary::
-   :toctree: generated
+.. toctree::
 
-   lumache
+   datum
 
 
 
