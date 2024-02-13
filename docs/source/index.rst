@@ -18,3 +18,4 @@ Contents
 .. toctree::
 
    class
+   TFT_eSPI
