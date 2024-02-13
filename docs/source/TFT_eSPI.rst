@@ -111,4 +111,4 @@ Callback prototype for smooth font pixel colour read
 
 Class TFT_eSPI
 ==============
-https://doc-tft-espi.readthedocs.io/en/latest/class.html
+https://doc-tft-espi.readthedocs.io/en/latest/class_TFT_eSPI.html
