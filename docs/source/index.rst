@@ -1,10 +1,9 @@
 Welcome to Lumache's documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**TFT_eSPI** (https://github.com/Bodmer/TFT_eSPI) est une librairie C qui, comme l'indique son GitHub, est 
+une bibliothèque compatible avec les IDE Arduino et PlatformIO, optimisée pour les Raspberry Pi Pico (RP2040),
+STM32, ESP8266 et ESP32 qui prend en charge les différents drivers d'écran.
 
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
