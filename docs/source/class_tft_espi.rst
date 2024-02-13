@@ -4,19 +4,24 @@ Class TFT_eSPI
 
 Herited from
 ------------
+
 * class Print
 
 Friends
 -------
+
 * class TFT_eSprite
 
 Constructors
 ------------
+
 * ``TFT_eSPI(int16_t _W = TFT_WIDTH, int16_t _H = TFT_HEIGHT)``
 
 Public methods
 --------------
-* `void begin(uint8_t tc = TAB_COLOUR) <begin>`
+
+:ref:`void begin(uint8_t tc = TAB_COLOUR) <begin>`
+* :ref:`void begin(uint8_t tc = TAB_COLOUR) <begin>`
 * void init(uint8_t tc = TAB_COLOUR)
 * virtual void drawPixel(int32_t x, int32_t y, uint32_t color)
 * virtual void drawChar(int32_t x, int32_t y, uint16_t c, uint32_t color, uint32_t bg, uint8_t size)
