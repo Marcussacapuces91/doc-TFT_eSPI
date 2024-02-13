@@ -6,15 +6,12 @@ Definition
 .. raw:: html
 
     <style>
-        .red {color:red; font-weight:bold;}
-        .b {color:#0000FF; background-color:white;}
+        .red {background-color:#0000FF;}
     </style>
 
 .. role:: red
 
-.. role:: b
-
-:red:`R`\G\ :b:`B`  
+:red:`    `
  
 .. table:: Colour enumeration
 
