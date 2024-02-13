@@ -20,13 +20,8 @@ Constructors
 Public methods
 --------------
 
-:doc:`void begin(uint8_t tc = TAB_COLOUR)<method/begin>`
-
-:doc:`void init(uint8_t tc = TAB_COLOUR)<method/init>`
-
-
-* :doc:`void begin(uint8_t tc = TAB_COLOUR)<begin>`
-* :doc:`void init(uint8_t tc = TAB_COLOUR)<init>`
+* :doc:`void begin(uint8_t tc = TAB_COLOUR)<method/begin>`
+* :doc:`void init(uint8_t tc = TAB_COLOUR)<method/init>`
 
 * virtual void drawPixel(int32_t x, int32_t y, uint32_t color)
 * virtual void drawChar(int32_t x, int32_t y, uint16_t c, uint32_t color, uint32_t bg, uint8_t size)
