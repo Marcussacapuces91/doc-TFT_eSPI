@@ -1,5 +1,5 @@
-Welcome to Lumache's documentation!
-===================================
+Welcome to TFT_eSPI's documentation!
+====================================
 
 **TFT_eSPI** (https://github.com/Bodmer/TFT_eSPI) est une librairie C qui, comme l'indique son GitHub, est 
 une bibliothèque compatible avec les IDE Arduino et PlatformIO, optimisée pour les Raspberry Pi Pico (RP2040),
