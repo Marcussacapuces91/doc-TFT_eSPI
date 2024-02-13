@@ -2,7 +2,7 @@ DATUM
 =====
 
 
-.. csv-table:: DATUM
+.. csv-table:: Font datum enumeration
    :header: "Libellés", "Valeurs", "Description"
 
    ``TL_DATUM``,    0,   "Top left (default)"
