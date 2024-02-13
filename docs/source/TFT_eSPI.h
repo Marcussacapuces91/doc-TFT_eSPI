@@ -7,5 +7,5 @@ Contents
 .. toctree::
 
    datum
-   colors
+   colours
    class
