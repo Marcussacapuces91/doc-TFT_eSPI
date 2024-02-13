@@ -20,9 +20,9 @@ Constructors
 Public methods
 --------------
 
-:doc:`void begin(uint8_t tc = TAB_COLOUR)<begin>`
+:doc:`void begin(uint8_t tc = TAB_COLOUR)<method/begin>`
 
-:doc:`void init(uint8_t tc = TAB_COLOUR)<init>`
+:doc:`void init(uint8_t tc = TAB_COLOUR)<method/init>`
 
 
 * :doc:`void begin(uint8_t tc = TAB_COLOUR)<begin>`
