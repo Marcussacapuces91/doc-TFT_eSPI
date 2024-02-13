@@ -2,9 +2,8 @@ DATUM
 =====
 
 
-.. csv-table:: DATUM :rst:dir:`csv-table`
+.. csv-table:: DATUM
    :header: "Libellés", "Valeurs", "Description"
-
    "TL_DATUM",    "0",   "Top left (default)"
    "TC_DATUM",    "1",   "Top centre"
    "TR_DATUM",    "2",   "Top right"
