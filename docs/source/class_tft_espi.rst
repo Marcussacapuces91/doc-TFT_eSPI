@@ -10,7 +10,7 @@ Herited from
 Friends
 -------
 
-* class TFT_eSprite
+* class :doc:`TFT_eSprite<class_tft_esprite>`
 
 Constructors
 ------------
@@ -20,19 +20,30 @@ Constructors
 Public methods
 --------------
 
+Begin/Init
+~~~~~~~~~~
+
 * :doc:`void begin(uint8_t tc = TAB_COLOUR)<method/begin>`
 * :doc:`void init(uint8_t tc = TAB_COLOUR)<method/init>`
 
-* virtual void drawPixel(int32_t x, int32_t y, uint32_t color)
-* virtual void drawChar(int32_t x, int32_t y, uint16_t c, uint32_t color, uint32_t bg, uint8_t size)
-* virtual void drawLine(int32_t xs, int32_t ys, int32_t xe, int32_t ye, uint32_t color)
-* virtual void drawFastVLine(int32_t x, int32_t y, int32_t h, uint32_t color)
-* virtual void drawFastHLine(int32_t x, int32_t y, int32_t w, uint32_t color)
-* virtual void fillRect(int32_t x, int32_t y, int32_t w, int32_t h, uint32_t color)
-* virtual int16_t drawChar(uint16_t uniCode, int32_t x, int32_t y, uint8_t font)
-* virtual int16_t drawChar(uint16_t uniCode, int32_t x, int32_t y)
+Draw anything
+~~~~~~~~~~~~~
+
+* :doc:`virtual void drawPixel(int32_t x, int32_t y, uint32_t color)<method/drawpixel>`
+* :doc:`virtual void drawChar(int32_t x, int32_t y, uint16_t c, uint32_t color, uint32_t bg, uint8_t size)<method/drawchar>`
+* :doc:`virtual void drawLine(int32_t xs, int32_t ys, int32_t xe, int32_t ye, uint32_t color)<method/drawline>`
+* :doc:`virtual void drawFastVLine(int32_t x, int32_t y, int32_t h, uint32_t color)<method/drawfastline>`
+* :doc:`virtual void drawFastHLine(int32_t x, int32_t y, int32_t w, uint32_t color)<method/drawfastline>`
+* :doc:`virtual void fillRect(int32_t x, int32_t y, int32_t w, int32_t h, uint32_t color)<method/fillrect>`
+* :doc:`virtual int16_t drawChar(uint16_t uniCode, int32_t x, int32_t y, uint8_t font)<method/drawchar>`
+* :doc:`virtual int16_t drawChar(uint16_t uniCode, int32_t x, int32_t y)<method/drawchar>`
+
+Get screen height/width
+~~~~~~~~~~~~~~~~~~~~~~~
+
 * virtual int16_t height(void)
 * virtual int16_t width(void)
+
 * virtual uint16_t readPixel(int32_t x, int32_t y)
 * virtual void setWindow(int32_t xs, int32_t ys, int32_t xe, int32_t ye)
 * virtual void pushColor(uint16_t color)
