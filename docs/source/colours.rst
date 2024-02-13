@@ -11,7 +11,7 @@ Definition
 
 .. role:: red
 
-:red:`    `
+:red:`ROUGE` 
  
 .. table:: Colour enumeration
 
