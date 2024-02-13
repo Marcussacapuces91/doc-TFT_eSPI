@@ -1,439 +1,122 @@
+======
 Classe
 ======
 
-.. toctree::
+Header
+======
+Arduino TFT graphics library targeted at ESP8266
+and ESP32 based boards.
 
-   datum
+This is a stand-alone library that contains the
+hardware driver, the graphics functions and the
+proportional fonts.
+
+The built-in fonts 4, 6, 7 and 8 are Run Length
+Encoded (RLE) to reduce the FLASH footprint.
+
+Last review/edit by Bodmer: 04/02/22
+
+Constants
+=========
+
+.. code:: C
+
+   #define TFT_ESPI_VERSION "2.5.43"
+
+Bit level feature flags
+Bit 0 set: viewport capability
+
+.. code:: C
+
+   #define TFT_ESPI_FEATURES 1
+
+Structures
+==========
+
+This structure allows sketches to retrieve the user setup parameters at runtime
+by calling getSetup(), zero impact on code size unless used, mainly for diagnostics
+
+.. code:: C
+
+   typedef struct
+   {
+   String  version = TFT_ESPI_VERSION;
+   String  setup_info;  // Setup reference name available to use in a user setup
+   uint32_t setup_id;   // ID available to use in a user setup
+   int32_t esp;         // Processor code
+   uint8_t trans;       // SPI transaction support
+   uint8_t serial;      // Serial (SPI) or parallel
+   #ifndef GENERIC_PROCESSOR
+   uint8_t  port;       // SPI port
+   #endif
+   uint8_t overlap;     // ESP8266 overlap mode
+   uint8_t interface;   // Interface type
+   
+   uint16_t tft_driver; // Hexadecimal code
+   uint16_t tft_width;  // Rotation 0 width and height
+   uint16_t tft_height;
+   
+   uint8_t r0_x_offset; // Display offsets, not all used yet
+   uint8_t r0_y_offset;
+   uint8_t r1_x_offset;
+   uint8_t r1_y_offset;
+   uint8_t r2_x_offset;
+   uint8_t r2_y_offset;
+   uint8_t r3_x_offset;
+   uint8_t r3_y_offset;
+   
+   int8_t pin_tft_mosi; // SPI pins
+   int8_t pin_tft_miso;
+   int8_t pin_tft_clk;
+   int8_t pin_tft_cs;
+   
+   int8_t pin_tft_dc;   // Control pins
+   int8_t pin_tft_rd;
+   int8_t pin_tft_wr;
+   int8_t pin_tft_rst;
+   
+   int8_t pin_tft_d0;   // Parallel port pins
+   int8_t pin_tft_d1;
+   int8_t pin_tft_d2;
+   int8_t pin_tft_d3;
+   int8_t pin_tft_d4;
+   int8_t pin_tft_d5;
+   int8_t pin_tft_d6;
+   int8_t pin_tft_d7;
+   
+   int8_t pin_tft_led;
+   int8_t pin_tft_led_on;
+   
+   int8_t pin_tch_cs;   // Touch chip select pin
+   
+   int16_t tft_spi_freq;// TFT write SPI frequency
+   int16_t tft_rd_freq; // TFT read  SPI frequency
+   int16_t tch_spi_freq;// Touch controller read/write SPI frequency
+   } setup_t;
 
 
+Callback
+========
+Callback prototype for smooth font pixel colour read
 
-/***************************************************
-  Arduino TFT graphics library targeted at ESP8266
-  and ESP32 based boards.
+.. code:: C
 
-  This is a stand-alone library that contains the
-  hardware driver, the graphics functions and the
-  proportional fonts.
+   typedef uint16_t (*getColorCallback)(uint16_t x, uint16_t y);
 
-  The built-in fonts 4, 6, 7 and 8 are Run Length
-  Encoded (RLE) to reduce the FLASH footprint.
 
-  Last review/edit by Bodmer: 04/02/22
- ****************************************************/
+Class TFT_eSPI
+==============
 
-// Stop fonts etc. being loaded multiple times
-#ifndef _TFT_eSPIH_
-#define _TFT_eSPIH_
+Herited from: Print
 
-#define TFT_ESPI_VERSION "2.5.43"
+Friend: class TFT_eSprite
 
-// Bit level feature flags
-// Bit 0 set: viewport capability
-#define TFT_ESPI_FEATURES 1
+Public methods
+--------------
 
-/***************************************************************************************
-**                         Section 1: Load required header files
-***************************************************************************************/
 
-//Standard support
-#include <Arduino.h>
-#include <Print.h>
-#if !defined (TFT_PARALLEL_8_BIT) && !defined (RP2040_PIO_INTERFACE)
-  #include <SPI.h>
-#endif
-/***************************************************************************************
-**                         Section 2: Load library and processor specific header files
-***************************************************************************************/
-// Include header file that defines the fonts loaded, the TFT drivers
-// available and the pins to be used, etc. etc.
-#ifdef CONFIG_TFT_eSPI_ESPIDF
-  #include "TFT_config.h"
-#endif
-
-// New ESP8266 board package uses ARDUINO_ARCH_ESP8266
-// old package defined ESP8266
-#if defined (ESP8266)
-  #ifndef ARDUINO_ARCH_ESP8266
-    #define ARDUINO_ARCH_ESP8266
-  #endif
-#endif
-
-// The following lines allow the user setup to be included in the sketch folder, see
-// "Sketch_with_tft_setup" generic example.
-#if !defined __has_include
-  #if !defined(DISABLE_ALL_LIBRARY_WARNINGS)
-    #warning Compiler does not support __has_include, so sketches cannot define the setup
-  #endif
-#else
-  #if __has_include(<tft_setup.h>)
-    // Include the sketch setup file
-    #include <tft_setup.h>
-    #ifndef USER_SETUP_LOADED
-      // Prevent loading further setups
-      #define USER_SETUP_LOADED
-    #endif
-  #endif
-#endif
-
-#include <User_Setup_Select.h>
-
-// Handle FLASH based storage e.g. PROGMEM
-#if defined(ARDUINO_ARCH_RP2040)
-  #undef pgm_read_byte
-  #define pgm_read_byte(addr)   (*(const unsigned char *)(addr))
-  #undef pgm_read_word
-  #define pgm_read_word(addr) ({ \
-    typeof(addr) _addr = (addr); \
-    *(const unsigned short *)(_addr); \
-  })
-  #undef pgm_read_dword
-  #define pgm_read_dword(addr) ({ \
-    typeof(addr) _addr = (addr); \
-    *(const unsigned long *)(_addr); \
-  })
-#elif defined(__AVR__)
-  #include <avr/pgmspace.h>
-#elif defined(ARDUINO_ARCH_ESP8266) || defined(ESP32)
-  #include <pgmspace.h>
-#else
-  #ifndef PROGMEM
-    #define PROGMEM
-  #endif
-#endif
-
-// Include the processor specific drivers
-#if defined(CONFIG_IDF_TARGET_ESP32S3)
-  #include "Processors/TFT_eSPI_ESP32_S3.h"
-#elif defined(CONFIG_IDF_TARGET_ESP32C3)
-  #include "Processors/TFT_eSPI_ESP32_C3.h"
-#elif defined (ESP32)
-  #include "Processors/TFT_eSPI_ESP32.h"
-#elif defined (ARDUINO_ARCH_ESP8266)
-  #include "Processors/TFT_eSPI_ESP8266.h"
-#elif defined (STM32)
-  #include "Processors/TFT_eSPI_STM32.h"
-#elif defined(ARDUINO_ARCH_RP2040)
-  #include "Processors/TFT_eSPI_RP2040.h"
-#else
-  #include "Processors/TFT_eSPI_Generic.h"
-  #define GENERIC_PROCESSOR
-#endif
-
-/***************************************************************************************
-**                         Section 3: Interface setup
-***************************************************************************************/
-#ifndef TAB_COLOUR
-  #define TAB_COLOUR 0
-#endif
-
-// If the SPI frequency is not defined, set a default
-#ifndef SPI_FREQUENCY
-  #define SPI_FREQUENCY  20000000
-#endif
-
-// If the SPI read frequency is not defined, set a default
-#ifndef SPI_READ_FREQUENCY
-  #define SPI_READ_FREQUENCY 10000000
-#endif
-
-// Some ST7789 boards do not work with Mode 0
-#ifndef TFT_SPI_MODE
-  #if defined(ST7789_DRIVER) || defined(ST7789_2_DRIVER)
-    #define TFT_SPI_MODE SPI_MODE3
-  #else
-    #define TFT_SPI_MODE SPI_MODE0
-  #endif
-#endif
-
-// If the XPT2046 SPI frequency is not defined, set a default
-#ifndef SPI_TOUCH_FREQUENCY
-  #define SPI_TOUCH_FREQUENCY  2500000
-#endif
-
-#ifndef SPI_BUSY_CHECK
-  #define SPI_BUSY_CHECK
-#endif
-
-// If half duplex SDA mode is defined then MISO pin should be -1
-#ifdef TFT_SDA_READ
-  #ifdef TFT_MISO
-    #if TFT_MISO != -1
-      #undef TFT_MISO
-      #define TFT_MISO -1
-      #warning TFT_MISO set to -1
-    #endif
-  #endif
-#endif  
-
-/***************************************************************************************
-**                         Section 4: Setup fonts
-***************************************************************************************/
-// Use GLCD font in error case where user requests a smooth font file
-// that does not exist (this is a temporary fix to stop ESP32 reboot)
-#ifdef SMOOTH_FONT
-  #ifndef LOAD_GLCD
-    #define LOAD_GLCD
-  #endif
-#endif
-
-// Only load the fonts defined in User_Setup.h (to save space)
-// Set flag so RLE rendering code is optionally compiled
-#ifdef LOAD_GLCD
-  #include <Fonts/glcdfont.c>
-#endif
-
-#ifdef LOAD_FONT2
-  #include <Fonts/Font16.h>
-#endif
-
-#ifdef LOAD_FONT4
-  #include <Fonts/Font32rle.h>
-  #define LOAD_RLE
-#endif
-
-#ifdef LOAD_FONT6
-  #include <Fonts/Font64rle.h>
-  #ifndef LOAD_RLE
-    #define LOAD_RLE
-  #endif
-#endif
-
-#ifdef LOAD_FONT7
-  #include <Fonts/Font7srle.h>
-  #ifndef LOAD_RLE
-    #define LOAD_RLE
-  #endif
-#endif
-
-#ifdef LOAD_FONT8
-  #include <Fonts/Font72rle.h>
-  #ifndef LOAD_RLE
-    #define LOAD_RLE
-  #endif
-#elif defined LOAD_FONT8N // Optional narrower version
-  #define LOAD_FONT8
-  #include <Fonts/Font72x53rle.h>
-  #ifndef LOAD_RLE
-    #define LOAD_RLE
-  #endif
-#endif
-
-#ifdef LOAD_GFXFF
-  // We can include all the free fonts and they will only be built into
-  // the sketch if they are used
-  #include <Fonts/GFXFF/gfxfont.h>
-  // Call up any user custom fonts
-  #include <User_Setups/User_Custom_Fonts.h>
-#endif // #ifdef LOAD_GFXFF
-
-// Create a null default font in case some fonts not used (to prevent crash)
-const  uint8_t widtbl_null[1] = {0};
-PROGMEM const uint8_t chr_null[1] = {0};
-PROGMEM const uint8_t* const chrtbl_null[1] = {chr_null};
-
-// This is a structure to conveniently hold information on the default fonts
-// Stores pointer to font character image address table, width table and height
-typedef struct {
-    const uint8_t *chartbl;
-    const uint8_t *widthtbl;
-    uint8_t height;
-    uint8_t baseline;
-    } fontinfo;
-
-// Now fill the structure
-const PROGMEM fontinfo fontdata [] = {
-  #ifdef LOAD_GLCD
-   { (const uint8_t *)font, widtbl_null, 0, 0 },
-  #else
-   { (const uint8_t *)chrtbl_null, widtbl_null, 0, 0 },
-  #endif
-   // GLCD font (Font 1) does not have all parameters
-   { (const uint8_t *)chrtbl_null, widtbl_null, 8, 7 },
-
-  #ifdef LOAD_FONT2
-   { (const uint8_t *)chrtbl_f16, widtbl_f16, chr_hgt_f16, baseline_f16},
-  #else
-   { (const uint8_t *)chrtbl_null, widtbl_null, 0, 0 },
-  #endif
-
-   // Font 3 current unused
-   { (const uint8_t *)chrtbl_null, widtbl_null, 0, 0 },
-
-  #ifdef LOAD_FONT4
-   { (const uint8_t *)chrtbl_f32, widtbl_f32, chr_hgt_f32, baseline_f32},
-  #else
-   { (const uint8_t *)chrtbl_null, widtbl_null, 0, 0 },
-  #endif
-
-   // Font 5 current unused
-   { (const uint8_t *)chrtbl_null, widtbl_null, 0, 0 },
-
-  #ifdef LOAD_FONT6
-   { (const uint8_t *)chrtbl_f64, widtbl_f64, chr_hgt_f64, baseline_f64},
-  #else
-   { (const uint8_t *)chrtbl_null, widtbl_null, 0, 0 },
-  #endif
-
-  #ifdef LOAD_FONT7
-   { (const uint8_t *)chrtbl_f7s, widtbl_f7s, chr_hgt_f7s, baseline_f7s},
-  #else
-   { (const uint8_t *)chrtbl_null, widtbl_null, 0, 0 },
-  #endif
-
-  #ifdef LOAD_FONT8
-   { (const uint8_t *)chrtbl_f72, widtbl_f72, chr_hgt_f72, baseline_f72}
-  #else
-   { (const uint8_t *)chrtbl_null, widtbl_null, 0, 0 }
-  #endif
-};
-
-/***************************************************************************************
-**                         Section 5: Font datum enumeration
-***************************************************************************************/
-//These enumerate the text plotting alignment (reference datum point)
-#define TL_DATUM 0 // Top left (default)
-#define TC_DATUM 1 // Top centre
-#define TR_DATUM 2 // Top right
-#define ML_DATUM 3 // Middle left
-#define CL_DATUM 3 // Centre left, same as above
-#define MC_DATUM 4 // Middle centre
-#define CC_DATUM 4 // Centre centre, same as above
-#define MR_DATUM 5 // Middle right
-#define CR_DATUM 5 // Centre right, same as above
-#define BL_DATUM 6 // Bottom left
-#define BC_DATUM 7 // Bottom centre
-#define BR_DATUM 8 // Bottom right
-#define L_BASELINE  9 // Left character baseline (Line the 'A' character would sit on)
-#define C_BASELINE 10 // Centre character baseline
-#define R_BASELINE 11 // Right character baseline
-
-/***************************************************************************************
-**                         Section 6: Colour enumeration
-***************************************************************************************/
-// Default color definitions
-#define TFT_BLACK       0x0000      /*   0,   0,   0 */
-#define TFT_NAVY        0x000F      /*   0,   0, 128 */
-#define TFT_DARKGREEN   0x03E0      /*   0, 128,   0 */
-#define TFT_DARKCYAN    0x03EF      /*   0, 128, 128 */
-#define TFT_MAROON      0x7800      /* 128,   0,   0 */
-#define TFT_PURPLE      0x780F      /* 128,   0, 128 */
-#define TFT_OLIVE       0x7BE0      /* 128, 128,   0 */
-#define TFT_LIGHTGREY   0xD69A      /* 211, 211, 211 */
-#define TFT_DARKGREY    0x7BEF      /* 128, 128, 128 */
-#define TFT_BLUE        0x001F      /*   0,   0, 255 */
-#define TFT_GREEN       0x07E0      /*   0, 255,   0 */
-#define TFT_CYAN        0x07FF      /*   0, 255, 255 */
-#define TFT_RED         0xF800      /* 255,   0,   0 */
-#define TFT_MAGENTA     0xF81F      /* 255,   0, 255 */
-#define TFT_YELLOW      0xFFE0      /* 255, 255,   0 */
-#define TFT_WHITE       0xFFFF      /* 255, 255, 255 */
-#define TFT_ORANGE      0xFDA0      /* 255, 180,   0 */
-#define TFT_GREENYELLOW 0xB7E0      /* 180, 255,   0 */
-#define TFT_PINK        0xFE19      /* 255, 192, 203 */ //Lighter pink, was 0xFC9F
-#define TFT_BROWN       0x9A60      /* 150,  75,   0 */
-#define TFT_GOLD        0xFEA0      /* 255, 215,   0 */
-#define TFT_SILVER      0xC618      /* 192, 192, 192 */
-#define TFT_SKYBLUE     0x867D      /* 135, 206, 235 */
-#define TFT_VIOLET      0x915C      /* 180,  46, 226 */
-
-// Next is a special 16-bit colour value that encodes to 8 bits
-// and will then decode back to the same 16-bit value.
-// Convenient for 8-bit and 16-bit transparent sprites.
-#define TFT_TRANSPARENT 0x0120 // This is actually a dark green
-
-// Default palette for 4-bit colour sprites
-static const uint16_t default_4bit_palette[] PROGMEM = {
-  TFT_BLACK,    //  0  ^
-  TFT_BROWN,    //  1  |
-  TFT_RED,      //  2  |
-  TFT_ORANGE,   //  3  |
-  TFT_YELLOW,   //  4  Colours 0-9 follow the resistor colour code!
-  TFT_GREEN,    //  5  |
-  TFT_BLUE,     //  6  |
-  TFT_PURPLE,   //  7  |
-  TFT_DARKGREY, //  8  |
-  TFT_WHITE,    //  9  v
-  TFT_CYAN,     // 10  Blue+green mix
-  TFT_MAGENTA,  // 11  Blue+red mix
-  TFT_MAROON,   // 12  Darker red colour
-  TFT_DARKGREEN,// 13  Darker green colour
-  TFT_NAVY,     // 14  Darker blue colour
-  TFT_PINK      // 15
-};
-
-/***************************************************************************************
-**                         Section 7: Diagnostic support
-***************************************************************************************/
-// #define TFT_eSPI_DEBUG     // Switch on debug support serial messages  (not used yet)
-// #define TFT_eSPI_FNx_DEBUG // Switch on debug support for function "x" (not used yet)
-
-// This structure allows sketches to retrieve the user setup parameters at runtime
-// by calling getSetup(), zero impact on code size unless used, mainly for diagnostics
-typedef struct
-{
-String  version = TFT_ESPI_VERSION;
-String  setup_info;  // Setup reference name available to use in a user setup
-uint32_t setup_id;   // ID available to use in a user setup
-int32_t esp;         // Processor code
-uint8_t trans;       // SPI transaction support
-uint8_t serial;      // Serial (SPI) or parallel
-#ifndef GENERIC_PROCESSOR
-uint8_t  port;       // SPI port
-#endif
-uint8_t overlap;     // ESP8266 overlap mode
-uint8_t interface;   // Interface type
-
-uint16_t tft_driver; // Hexadecimal code
-uint16_t tft_width;  // Rotation 0 width and height
-uint16_t tft_height;
-
-uint8_t r0_x_offset; // Display offsets, not all used yet
-uint8_t r0_y_offset;
-uint8_t r1_x_offset;
-uint8_t r1_y_offset;
-uint8_t r2_x_offset;
-uint8_t r2_y_offset;
-uint8_t r3_x_offset;
-uint8_t r3_y_offset;
-
-int8_t pin_tft_mosi; // SPI pins
-int8_t pin_tft_miso;
-int8_t pin_tft_clk;
-int8_t pin_tft_cs;
-
-int8_t pin_tft_dc;   // Control pins
-int8_t pin_tft_rd;
-int8_t pin_tft_wr;
-int8_t pin_tft_rst;
-
-int8_t pin_tft_d0;   // Parallel port pins
-int8_t pin_tft_d1;
-int8_t pin_tft_d2;
-int8_t pin_tft_d3;
-int8_t pin_tft_d4;
-int8_t pin_tft_d5;
-int8_t pin_tft_d6;
-int8_t pin_tft_d7;
-
-int8_t pin_tft_led;
-int8_t pin_tft_led_on;
-
-int8_t pin_tch_cs;   // Touch chip select pin
-
-int16_t tft_spi_freq;// TFT write SPI frequency
-int16_t tft_rd_freq; // TFT read  SPI frequency
-int16_t tch_spi_freq;// Touch controller read/write SPI frequency
-} setup_t;
-
-/***************************************************************************************
-**                         Section 8: Class member and support functions
-***************************************************************************************/
-
-// Callback prototype for smooth font pixel colour read
-typedef uint16_t (*getColorCallback)(uint16_t x, uint16_t y);
-
-// Class functions and variables
-class TFT_eSPI : public Print { friend class TFT_eSprite; // Sprite class has access to protected members
+class TFT_eSPI : public Print { 
+   friend class TFT_eSprite; // Sprite class has access to protected members
 
  //--------------------------------------- public ------------------------------------//
  public:
