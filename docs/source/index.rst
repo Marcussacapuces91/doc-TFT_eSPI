@@ -1,3 +1,4 @@
+====================================
 Welcome to TFT_eSPI's documentation!
 ====================================
 
@@ -17,5 +18,5 @@ Contents
 
 .. toctree::
 
-   class
-   TFT_eSPI
+   classes
+
