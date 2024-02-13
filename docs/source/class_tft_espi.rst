@@ -21,8 +21,10 @@ Public methods
 --------------
 
 :ref:`void begin(uint8_t tc = TAB_COLOUR) <begin>`
+
 * :ref:`void begin(uint8_t tc = TAB_COLOUR) <begin>`
-* void init(uint8_t tc = TAB_COLOUR)
+* :ref:`void init(uint8_t tc = TAB_COLOUR) <init>`
+
 * virtual void drawPixel(int32_t x, int32_t y, uint32_t color)
 * virtual void drawChar(int32_t x, int32_t y, uint16_t c, uint32_t color, uint32_t bg, uint8_t size)
 * virtual void drawLine(int32_t xs, int32_t ys, int32_t xe, int32_t ye, uint32_t color)
