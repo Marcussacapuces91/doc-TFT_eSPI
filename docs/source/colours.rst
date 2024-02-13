@@ -5,9 +5,7 @@ Definition
 ----------
 .. raw:: html
 
-    <style>
-        .red {background-color:#0000FF;}
-    </style>
+    <span style="background-color:#0000FF;">&nbsp;&nbsp;&nbsp;</span>
 
 .. role:: red
 
