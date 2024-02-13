@@ -9,7 +9,7 @@ Header file TFT_eSPI.h
    class
 
 Header
-======
+------
 Arduino TFT graphics library targeted at ESP8266
 and ESP32 based boards.
 
@@ -23,7 +23,7 @@ Encoded (RLE) to reduce the FLASH footprint.
 Last review/edit by Bodmer: 04/02/22
 
 Constants
-=========
+---------
 
 .. code:: C
 
@@ -37,7 +37,7 @@ Bit 0 set: viewport capability
    #define TFT_ESPI_FEATURES 1
 
 Structures
-==========
+----------
 
 This structure allows sketches to retrieve the user setup parameters at runtime
 by calling getSetup(), zero impact on code size unless used, mainly for diagnostics
@@ -102,7 +102,8 @@ by calling getSetup(), zero impact on code size unless used, mainly for diagnost
 
 
 Callback
-========
+--------
+
 Callback prototype for smooth font pixel colour read
 
 .. code:: C
@@ -110,5 +111,6 @@ Callback prototype for smooth font pixel colour read
    typedef uint16_t (*getColorCallback)(uint16_t x, uint16_t y);
 
 Class TFT_eSPI
-==============
-`Class TFT_eSPI <class_TFT_eSPI>`
+--------------
+
+`Class TFT_eSPI <class_tft_espi>`
