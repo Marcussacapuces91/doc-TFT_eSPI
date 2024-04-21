@@ -1,9 +1,6 @@
 # Documentation TFT_eSPI
 
-https://readthedocs.org/projects/doc-tft-espi/badge/?version=latest
-
-
-[![Documentation Status](https://readthedocs.org/projects/projects/doc-tft-espi/badge/?version=latest)](https://projects/doc-tft-espi.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/doc-tft-espi/badge/?version=latest)](https://doc-tft-espi.readthedocs.io/en/latest/?badge=latest)
 
 <!--
 This example shows a basic MkDocs project with Read the Docs. You're encouraged to view it to get inspiration and copy & paste from the files in the source code. If you are using Read the Docs for the first time, have a look at the official [Read the Docs Tutorial](https://docs.readthedocs.io/en/stable/tutorial/index.html).
