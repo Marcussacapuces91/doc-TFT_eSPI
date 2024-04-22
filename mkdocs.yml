@@ -1,4 +1,4 @@
-site_name: Doc for TFT_eSPI library
+site_name: TFT_eSPI library
 theme:
   name: readthedocs
   highlightjs: true
