@@ -2,17 +2,21 @@
 
 [![Documentation Status](https://readthedocs.org/projects/doc-tft-espi/badge/?version=latest)](https://doc-tft-espi.readthedocs.io/en/latest/?badge=latest)
 
-<!--
-This example shows a basic MkDocs project with Read the Docs. You're encouraged to view it to get inspiration and copy & paste from the files in the source code. If you are using Read the Docs for the first time, have a look at the official [Read the Docs Tutorial](https://docs.readthedocs.io/en/stable/tutorial/index.html).
+Vous trouverez ici un projet de documentation pour la librairie [TFT_eSPI](https://github.com/Bodmer/TFT_eSPI) avec "Read the Docs".
+Vous êtes encouragés à m'aider dans ce projet de documentation.
 
-📚 [docs/](https://github.com/readthedocs-examples/example-mkdocs-basic/blob/main/docs/)<br>
-A basic MkDocs project lives in `docs/`, it was generated using MkDocs defaults. All the `*.md` make up sections in the documentation.
+📚 [docs/](https://github.com/Marcussacapuces91/doc-TFT_eSPI/tree/main/docs)<br>
+Les différents fichiers principalement en Markdown comme source de la documentation. Ils sont "compilés" avec [MkDocs](https://mkdocs.readthedocs.io/en/stable/) avant d'être publiés sur le site [Read the Docs](https://doc-tft-espi.readthedocs.io/).
 
-⚙️ [.readthedocs.yaml](https://github.com/readthedocs-examples/example-mkdocs-basic/blob/main/.readthedocs.yaml)<br>
+⚙️ [.readthedocs.yaml](https://github.com/Marcussacapuces91/doc-TFT_eSPI/blob/main/.readthedocs.yaml)<br>
 Read the Docs Build configuration is stored in `.readthedocs.yaml`.
 
-⚙️ [mkdocs.yml](https://github.com/readthedocs-examples/example-mkdocs-basic/blob/main/mkdocs.yml)<br>
-A basic [MkDocs configuration](https://www.mkdocs.org/user-guide/configuration/) is stored here, including a few extensions for MkDocs and Markdown. Add your own configurations here, such as extensions and themes. Remember that many extensions and themes require additional Python packages to be installed.
+⚙️ [mkdocs.yml](https://github.com/Marcussacapuces91/doc-TFT_eSPI/blob/main/mkdocs.yml)<br>
+Ce fichier permet la [configuration du comportement de MkDocs](https://www.mkdocs.org/user-guide/configuration/), en particulier la mise en oeuvre d'extensions Markdown ou MkDocs.
+
+<!--
+
+
 
 📍 [docs/requirements.txt](https://github.com/readthedocs-examples/example-mkdocs-basic/blob/main/docs/requirements.txt) and [docs/requirements.in](https://github.com/readthedocs-examples/example-mkdocs-basic/blob/main/docs/requirements.in)<br>
 Python dependencies are [pinned](https://docs.readthedocs.io/en/latest/guides/reproducible-builds.html) (uses [pip-tools](https://pip-tools.readthedocs.io/en/latest/)) here. Make sure to add your Python dependencies to `requirements.txt` or if you choose [pip-tools](https://pip-tools.readthedocs.io/en/latest/), edit `docs/requirements.in` and remember to run to run `pip-compile docs/requirements.in`.
