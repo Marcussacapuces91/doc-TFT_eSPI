@@ -1,4 +1,8 @@
 site_name: TFT_eSPI library
+site_description: Some docs to help you to use the TFT_eSPI library.
+site_url:
+repo_url: https://github.com/Marcussacapuces91/doc-TFT_eSPI
+
 theme:
   name: readthedocs
   highlightjs: true
@@ -14,3 +18,12 @@ markdown_extensions:
   - markdown_include.include:
       base_path: .
   - admonition
+
+nav:
+  - 'Welcome': index.md
+  - 'Getting Started': starting.md
+  - 'Display Fundamentals': fundamentals.md
+  - 'Graphics and UI': graphics.md
+  - 'Touch and Input': inputs.md
+  - 'Advanced Topics': advanced.md
+  - 'Examples and Resources': examples.md
