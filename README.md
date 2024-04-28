@@ -1,9 +1,9 @@
 # Documentation TFT_eSPI
 
-[![Documentation Status](https://readthedocs.org/projects/doc-tft-espi/badge/?version=latest)](https://doc-tft-espi.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/doc-tft-espi/badge/?version=latest)](https://doc-tft-espi.readthedocs.io)
 
-Vous trouverez ici un projet de documentation pour la librairie [TFT_eSPI](https://github.com/Bodmer/TFT_eSPI) avec "Read the Docs".
-Vous êtes encouragés à m'aider dans ce projet de documentation.
+Vous trouverez ici un projet de documentation pour la librairie [TFT_eSPI](https://github.com/Bodmer/TFT_eSPI) avec 
+`Read the Docs`. Vous êtes encouragés à m'aider dans ce projet de documentation.
 
 Read the Docs Dashboard: https://beta.readthedocs.org/projects/doc-tft-espi/
 
