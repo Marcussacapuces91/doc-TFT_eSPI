@@ -1,5 +1,5 @@
 ---
-title: 'TFT_eSPI::TFT_eSPI
+title: TFT_eSPI::TFT_eSPI
 ---
 
 ## Description

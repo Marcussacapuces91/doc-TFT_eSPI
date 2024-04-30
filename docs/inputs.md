@@ -1,5 +1,7 @@
+---
+title: Touch and Input
+---
 
+## Enabling and configuring touch input
 
-  - 'Touch and Input'
-    - 'Enabling and configuring touch input'
-    - 'Handling touch events and gestures'
+## Handling touch events and gestures

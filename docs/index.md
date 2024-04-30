@@ -8,11 +8,6 @@ STM32, ESP8266 et ESP32 qui prennent en charge les différents drivers d'écran.
 
 Je commence ici une documentation détaillée de cette bibliothèque qui m'a manquée pour mes développements sur ESP32.
 
-
-
-
-
 !!! note
 
     This project is under active development.
-

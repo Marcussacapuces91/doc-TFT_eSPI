@@ -4,11 +4,13 @@ title: TFT_eSPI::drawChar
 
 ## Description
 
-Description of the method taken from docs.
+Draw a single character in the GLCD or GFXFF font or a Unicode glyph onto the screen.
 
 ## Signature
 
-`void drawChar(int32_t x, int32_t y, uint16_t c, uint32_t color, uint32_t bg, uint8_t size)`
+* `void drawChar(int32_t x, int32_t y, uint16_t c, uint32_t color, uint32_t bg, uint8_t size)`
+* `int16_t drawChar(uint16_t uniCode, int32_t x, int32_t y)`
+* `int16_t drawChar(uint16_t uniCode, int32_t x, int32_t y, uint8_t font)`
 
 ## Parameters
 
@@ -18,10 +20,13 @@ Description of the method taken from docs.
 * `uìnt32_t color`: text color.
 * `uìnt32_t bg`: backgroung color.
 * `uìnt8_t size`: character size.
+* `uìnt16_t uniCode`: Unicode glyph.
+* `uìnt8_t font`: text font number.
 
 ## Result
 
-`void`
+* `void`
+* `int16_t`: 
 
 ## Example
 

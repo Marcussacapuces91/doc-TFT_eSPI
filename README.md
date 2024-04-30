@@ -53,7 +53,11 @@ mkdocs serve
 
 ## Read the Docs tutorial
 
-To get started with Read the Docs, you may also refer to the [Read the Docs tutorial](https://docs.readthedocs.io/en/stable/tutorial/). It provides a full walk-through of building an example project similar to the one in this repository.
+To get started with Read the Docs, you may also refer to the
+[Read the Docs tutorial](https://docs.readthedocs.io/en/stable/tutorial/). It provides a full walk-through of building
+an example project similar to the one in this repository.
+
+You can also find the [Project documentation with Markdown](https://mkdocs.readthedocs.io).
 
 -----
 :copyright: 2024 by Marc SIBERT<br/>

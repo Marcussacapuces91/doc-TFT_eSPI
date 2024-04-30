@@ -1,11 +1,13 @@
 site_name: TFT_eSPI library
 site_description: Some docs to help you to use the TFT_eSPI library.
-site_url:
+# site_url:
 repo_url: https://github.com/Marcussacapuces91/doc-TFT_eSPI
+copyright: 'Copyright &copy; 2024 by Marc SIBERT'
 
 theme:
   name: readthedocs
   highlightjs: true
+
 plugins:
   - search
   - mkdocstrings:
@@ -18,6 +20,19 @@ markdown_extensions:
   - markdown_include.include:
       base_path: .
   - admonition
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      auto_title: true
+      linenums: true
+      pygments_lang_class: true
+      use_pygments: false
+  - pymdownx.mark
+  - pymdownx.superfences
+  - pymdownx.tilde
 
 nav:
   - 'Welcome': index.md
@@ -27,3 +42,6 @@ nav:
   - 'Touch and Input': inputs.md
   - 'Advanced Topics': advanced.md
   - 'Examples and Resources': examples.md
+  - Classes:
+    - 'TFT_eSPI': 'classes/tft_espi.md'
+    - 'TFT_eSPRITE': 'classes/tft_esprite.md'
