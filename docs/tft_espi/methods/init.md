@@ -4,15 +4,15 @@ title: 'TFT_eSPI::init'
 
 ## Description
 
-`init()` and [`begin()`](tft_espi_begin.md) are equivalent, `begin()` included for backwards compatibility.
+`init()` and [`begin()`](begin.md) are equivalent, `begin()` included for backwards compatibility.
 
 ## Signature
 
-* ``void init(uint8_t tc = TAB_COLOUR)``
+`void init(uint8_t tc = TAB_COLOUR)`
 
 ## Parameters
 
-* `uint8_t tc` : default to `TAB_COLOUR` ; tab colour option is for ST7735 displays only.
+`uint8_t tc` : default to `TAB_COLOUR` ; tab colour option is for ST7735 displays only.
 
 ## Result
 

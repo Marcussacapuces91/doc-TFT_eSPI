@@ -4,7 +4,7 @@ title: 'TFT_eSPI::begin'
 
 ## Description
 
-[`init()`](tft_espi_init.md) and `begin()`, `begin()` included for backwards compatibility.
+[`init()`](init) and `begin()`, `begin()` included for backwards compatibility.
 
 ## Signature
 

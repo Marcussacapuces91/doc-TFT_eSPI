@@ -8,36 +8,37 @@ title: Class TFT_eSPI
 
 ## Friends
 
-* [class `TFT_eSprite`](tft_esprite.md)
+* [class `TFT_eSprite`](../tft_esprite.md)
 
 ## Public methods
 
 ### Constructor
 
-* [`TFT_eSPI(int16_t _W = TFT_WIDTH, int16_t _H = TFT_HEIGHT)`](../methods/tft_espi_constructor.md)
+* [`TFT_eSPI(int16_t _W = TFT_WIDTH, int16_t _H = TFT_HEIGHT)`](methods/constructor.md)
 
 ### Begin/Init
 
-* [`void begin(uint8_t tc = TAB_COLOUR)`](../methods/tft_espi_begin.md)
-* [`void init(uint8_t tc = TAB_COLOUR)`](../methods/tft_espi_init.md)
+* [`void begin(uint8_t tc = TAB_COLOUR)`](methods/begin.md)
+* [`void init(uint8_t tc = TAB_COLOUR)`](methods/init.md)
 
 ### Draw anything
 
-* [`void drawPixel(int32_t x, int32_t y, uint32_t color)`](../methods/tft_espi_drawpixel.md)
-* [`uint16_t drawPixel(int32_t x, int32_t y, uint32_t color, uint8_t alpha, uint32_t bg_color)`](../methods/tft_espi_drawpixel.md)
-* [`void drawChar(int32_t x, int32_t y, uint16_t c, uint32_t color, uint32_t bg, uint8_t size)`](../methods/tft_espi_drawchar.md)
-* [`void drawLine(int32_t xs, int32_t ys, int32_t xe, int32_t ye, uint32_t color)`](../methods/tft_espi_drawline.md)
-* `void drawFastVLine(int32_t x, int32_t y, int32_t h, uint32_t color)<method/drawfastline>`
-* `void drawFastHLine(int32_t x, int32_t y, int32_t w, uint32_t color)<method/drawfastline>`
-* `void fillRect(int32_t x, int32_t y, int32_t w, int32_t h, uint32_t color)<method/fillrect>`
-* `int16_t drawChar(uint16_t uniCode, int32_t x, int32_t y, uint8_t font)<method/drawchar>`
-* `int16_t drawChar(uint16_t uniCode, int32_t x, int32_t y)<method/drawchar>`
+* [`void drawPixel(int32_t x, int32_t y, uint32_t color)`](methods/drawpixel.md)
+* [`uint16_t drawPixel(int32_t x, int32_t y, uint32_t color, uint8_t alpha, uint32_t bg_color)`](methods/drawpixel.md)
+* [`void drawChar(int32_t x, int32_t y, uint16_t c, uint32_t color, uint32_t bg, uint8_t size)`](methods/drawchar.md)
+* [`int16_t drawChar(uint16_t uniCode, int32_t x, int32_t y)`](methods/drawchar.md)
+* [`int16_t drawChar(uint16_t uniCode, int32_t x, int32_t y, uint8_t font)`](methods/drawchar.md)
+* [`void drawLine(int32_t xs, int32_t ys, int32_t xe, int32_t ye, uint32_t color)`](methods/drawline.md)
+* [`void drawFastVLine(int32_t x, int32_t y, int32_t h, uint32_t color)`](methods/drawfastline.md)
+* [`void drawFastHLine(int32_t x, int32_t y, int32_t w, uint32_t color)`](methods/drawfastline.md)
+* [`void fillRect(int32_t x, int32_t y, int32_t w, int32_t h, uint32_t color)`](methods/fillrect.md)
 
 ### Get screen height/width
 
-* `virtual int16_t height(void)`
-* `virtual int16_t width(void)`
+* [`virtual int16_t height(void)`](methods/height_width.md)
+* [`virtual int16_t width(void)`](methods/height_width.md)
 
+<!--
 ### what ? 
 
 * virtual uint16_t readPixel(int32_t x, int32_t y)
@@ -357,3 +358,4 @@ Protected attributs
 
 }; // End of class TFT_eSPI
 
+-->

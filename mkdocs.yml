@@ -42,6 +42,18 @@ nav:
   - 'Touch and Input': inputs.md
   - 'Advanced Topics': advanced.md
   - 'Examples and Resources': examples.md
-  - Classes:
-    - 'TFT_eSPI': 'classes/tft_espi.md'
-    - 'TFT_eSPRITE': 'classes/tft_esprite.md'
+  - TFT_eSPI:
+    - Class: tft_espi/class.md
+    - Methods:
+      - tft_espi/methods/constructor.md
+      - tft_espi/methods/begin.md
+      - tft_espi/methods/drawchar.md
+      - tft_espi/methods/drawfastline.md
+      - tft_espi/methods/drawline.md
+      - tft_espi/methods/drawpixel.md
+      - tft_espi/methods/fillrect.md
+      - tft_espi/methods/height_width.md
+      - tft_espi/methods/init.md
+      - tft_espi/methods/setviewport.md
+  - TFT_eSPRITE:
+    - Class: tft_esprite.md

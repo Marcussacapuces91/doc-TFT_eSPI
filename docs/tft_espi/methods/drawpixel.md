@@ -1,11 +1,10 @@
 ---
-title: tft_espi::drawpixel 
+title: TFT_eSPI::drawPixel
 ---
 
 ## Description
 
-Push a single pixel at an arbitrary position or
-draw a pixel blended with the screen or bg pixel colour.
+Push a single pixel at an arbitrary position or draw a pixel blended with the screen or bg pixel colour.
 
 ## Signature
 
@@ -18,13 +17,14 @@ draw a pixel blended with the screen or bg pixel colour.
 * `int32_t y`: y coord.
 * `uint32_t color`: Pixel color.
 * `uint8_t alpha`: Alpha blended value in [0..255].
-* `uint32_t bg_color`: Background color. 
+* `uint32_t bg_color`: Background color.
 
 ## Result
 
 * `void`
 * `uint16_t`: The pixel color after alpha blending.
 
+<!--
 ## Example
 
 Cpp example of method in the context. Including all needed `#include`
@@ -33,3 +33,4 @@ Cpp example of method in the context. Including all needed `#include`
 #include <TFT_eSPI.h>
 
 ```
+-->
