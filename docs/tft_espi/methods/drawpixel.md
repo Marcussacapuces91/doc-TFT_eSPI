@@ -15,9 +15,9 @@ Push a single pixel at an arbitrary position or draw a pixel blended with the sc
 
 * `int32_t x`: x coord.
 * `int32_t y`: y coord.
-* `uint32_t color`: Pixel color.
+* `uint32_t color`: [pixel color](../colors.md).
 * `uint8_t alpha`: Alpha blended value in [0..255].
-* `uint32_t bg_color`: Background color.
+* `uint32_t bg_color`: [background color](../colors.md).
 
 ## Result
 

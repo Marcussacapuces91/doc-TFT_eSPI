@@ -17,7 +17,7 @@ Draw horizontal and vertical lines.
 * `int32_t y`: y coord. from
 * `int32_t w`: width
 * `int32_t h`: height
-* `int32_t color`: color
+* `int32_t color`: [color](../colors.md)
 
 ## Result
 
