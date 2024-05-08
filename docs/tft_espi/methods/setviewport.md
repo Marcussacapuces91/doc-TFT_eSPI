@@ -4,19 +4,23 @@ title: TFT_eSPI::setViewport
 
 ## Description
 
-Description of the method taken from docs.
+Set the clipping region for the TFT screen
 
 ## Signature
 
-List of method signatures. 
+`void setViewport(int32_t x, int32_t y, int32_t w, int32_t h, bool vpDatum)`
 
 ## Parameters
 
-Parameters list for all signatures available.
-
+* `ìnt32_t` x: Datum x position in screen coordinates;
+* `ìnt32_t` y: Datum y position in screen coordinates;
+* `ìnt32_t` w: Viewport width;
+* `ìnt32_t` h: Viewport height;
+* `bool` vpDatum: Is datum at top left corner of screen (true = top left of viewport).
+ 
 ## Result
 
-Result returned by the méthod.
+`void`
 
 ## Example
 

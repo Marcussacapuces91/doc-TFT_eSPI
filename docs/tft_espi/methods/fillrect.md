@@ -14,21 +14,21 @@ Draw a filled rectangle with a fix color, or with a vertical or horizontal gradi
 
 ## Parameters
 
-* `int32_t x`: x coord.
-* `int32_t y`: y coord.
-* `int32_t w`: rect width.
-* `int32_t h`: rect height.
-* `uint32_t color`: [fill color](../colors.md).
-* `int16_t x`: x coord.
-* `int16_t y`: y coord.
-* `int16_t w`: rect width.
-* `int16_t h`: rect height.
-* `uint32_t color1`: [start gradient color](../colors.md).
-* `uint32_t color2`: [stop gradient color](../colors.md).
+* `int32_t` x: x coord.
+* `int32_t` y: y coord.
+* `int32_t` w: rect width.
+* `int32_t` h: rect height.
+* `uint32_t` color: [fill color](../colors.md).
+* `int16_t` x: x coord.
+* `int16_t` y: y coord.
+* `int16_t` w: rect width.
+* `int16_t` h: rect height.
+* `uint32_t` color1: [start gradient color](../colors.md).
+* `uint32_t` color2: [stop gradient color](../colors.md).
 
 ## Result
 
-* `void`
+`void`
 
 ## Example
 

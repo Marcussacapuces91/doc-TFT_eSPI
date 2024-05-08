@@ -43,6 +43,7 @@ nav:
   - 'Advanced Topics': advanced.md
   - 'Examples and Resources': examples.md
   - TFT_eSPI:
+    - Colors: tft_espi/colors.md
     - Class: tft_espi/class.md
     - Methods:
       - tft_espi/methods/constructor.md
@@ -54,6 +55,7 @@ nav:
       - tft_espi/methods/fillrect.md
       - tft_espi/methods/height_width.md
       - tft_espi/methods/init.md
+      - tft_espi/methods/readpixel.md
       - tft_espi/methods/setviewport.md
   - TFT_eSPRITE:
     - Class: tft_esprite.md

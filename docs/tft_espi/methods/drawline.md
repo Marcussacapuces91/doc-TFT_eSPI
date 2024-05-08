@@ -20,7 +20,7 @@ Draw a line between 2 arbitrary points using Bresenham's algorithm.
 
 ## Result
 
-* `void`
+`void`
 
 ## Example
 

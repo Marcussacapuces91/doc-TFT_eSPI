@@ -38,10 +38,14 @@ title: Class TFT_eSPI
 * [`virtual int16_t height(void)`](methods/height_width.md)
 * [`virtual int16_t width(void)`](methods/height_width.md)
 
+### Get pixel color
+
+* [`virtual uint16_t readPixel(int32_t x, int32_t y)`](methods/readpixel.md)
+
+
 <!--
 ### what ? 
 
-* virtual uint16_t readPixel(int32_t x, int32_t y)
 * virtual void setWindow(int32_t xs, int32_t ys, int32_t xe, int32_t ye)
 * virtual void pushColor(uint16_t color)
 * virtual void begin_nin_write()
