@@ -14,14 +14,14 @@ Draw a single character in the GLCD or GFXFF font or a Unicode glyph onto the sc
 
 ## Parameters
 
-* `ìnt32_t x`: x coord.
-* `ìnt32_t y`: y coord.
-* `uìnt16_t c`: character.
-* `uìnt32_t color`: [text color](../colors.md).
-* `uìnt32_t bg`: [backgroung color](../colors.md).
-* `uìnt8_t size`: character size.
-* `uìnt16_t uniCode`: Unicode glyph.
-* `uìnt8_t font`: text font number.
+* `ìnt32_t` x: x coord.
+* `ìnt32_t` y: y coord.
+* `uìnt16_t` c: character.
+* `uìnt32_t` color: [text color](../colors.md).
+* `uìnt32_t` bg: [backgroung color](../colors.md).
+* `uìnt8_t` size: character size.
+* `uìnt16_t` uniCode: Unicode glyph.
+* `uìnt8_t` font: text font number.
 
 ## Result
 

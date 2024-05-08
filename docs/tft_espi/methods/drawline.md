@@ -12,11 +12,11 @@ Draw a line between 2 arbitrary points using Bresenham's algorithm.
 
 ## Parameters
 
-* `ìnt32_t x0`: x coord from.
-* `ìnt32_t y0`: y coord from.
-* `ìnt32_t x1`: x coord to.
-* `ìnt32_t y1`: y coord to.
-* `uìnt32_t color`: [line color](../colors.md).
+* `ìnt32_t` x0: x coord from.
+* `ìnt32_t` y0: y coord from.
+* `ìnt32_t` x1: x coord to.
+* `ìnt32_t` y1: y coord to.
+* `uìnt32_t` color: [line color](../colors.md).
 
 ## Result
 
