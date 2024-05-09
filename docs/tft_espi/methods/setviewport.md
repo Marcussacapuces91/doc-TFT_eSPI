@@ -20,7 +20,7 @@ Set the clipping region for the TFT screen
  
 ## Result
 
-`void`
+None.
 
 <!--
 ## Example

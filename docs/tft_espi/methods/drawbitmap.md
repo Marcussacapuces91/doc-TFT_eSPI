@@ -24,8 +24,9 @@ Draw an image stored in an array on the TFT.
 
 ## Result
 
-Result returned by the méthod.
+None.
 
+<!--
 ## Example
 
 Cpp example of method in the context. Including all needed `#include`
@@ -34,3 +35,4 @@ Cpp example of method in the context. Including all needed `#include`
 #include <TFT_eSPI.h>
 
 ```
+-->

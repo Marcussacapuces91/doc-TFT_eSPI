@@ -73,7 +73,7 @@ title: Class TFT_eSPI
 * `void fillRoundRect(int32_t x, int32_t y, int32_t w, int32_t h, int32_t radius, uint32_t color)`
 * `void fillSmoothCircle(int32_t x, int32_t y, int32_t r, uint32_t color, uint32_t bg_color = 0x00FFFFFF)`
 * `void fillSmoothRoundRect(int32_t x, int32_t y, int32_t w, int32_t h, int32_t radius, uint32_t color, uint32_t bg_color = 0x00FFFFFF)`
-* `void fillScreen(uint32_t color)`
+* [`void fillScreen(uint32_t color)`](methods/fillscreen.md)
 * `void fillTriangle(int32_t x1,int32_t y1, int32_t x2,int32_t y2, int32_t x3,int32_t y3, uint32_t color)`
 
 ### Get screen height/width
@@ -81,9 +81,11 @@ title: Class TFT_eSPI
 * [`virtual int16_t height(void)`](methods/height_width.md)
 * [`virtual int16_t width(void)`](methods/height_width.md)
 
-### Get pixel color
+### Colors
 
 * [`virtual uint16_t readPixel(int32_t x, int32_t y)`](methods/readpixel.md)
+* [`void setTextColor(uint16_t color)`](methods/settextcolor.md)
+* [`void setTextColor(uint16_t fgcolor, uint16_t bgcolor, bool bgfill = false)`](methods/settextcolor.md)
 
 ### Viewport
 
@@ -103,6 +105,13 @@ title: Class TFT_eSPI
 * `void setAddrWindow(int32_t xs, int32_t ys, int32_t w, int32_t h)`
 * `bool clipAddrWindow(int32_t* x, int32_t* y, int32_t* w, int32_t* h)`
 * `bool clipWindow(int32_t* xs, int32_t* ys, int32_t* xe, int32_t* ye)`
+
+### Cursor
+* [`void setCursor(int16_t x, int16_t y)`](methods/setcursor.md)
+* [`void setCursor(int16_t x, int16_t y, uint8_t font)`](methods/setcursor.md)
+* int16_t  getCursorX(void)
+* int16_t  getCursorY(void)
+
 
 <!--
 ### what ? 
@@ -143,12 +152,6 @@ title: Class TFT_eSPI
 * void pushImage(int32_t x, int32_t y, int32_t w, int32_t h, const uint8_t *data, bool bpp8,  uint16_t *cmap = nullptr)
 * void pushMaskedImage(int32_t x, int32_t y, int32_t w, int32_t h, uint16_t *img, uint8_t *mask)
 * void readRectRGB(int32_t x, int32_t y, int32_t w, int32_t h, uint8_t *data)
-* void setCursor(int16_t x, int16_t y)
-* void setCursor(int16_t x, int16_t y, uint8_t font)
-* int16_t  getCursorX(void)
-* int16_t  getCursorY(void)
-* void setTextColor(uint16_t color)
-* void setTextColor(uint16_t fgcolor, uint16_t bgcolor, bool bgfill = false)
 * void setTextSize(uint8_t size)
 * void setTextWrap(bool wrapX, bool wrapY = false)
 * void setTextDatum(uint8_t datum)

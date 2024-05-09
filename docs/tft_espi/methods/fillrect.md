@@ -28,7 +28,7 @@ Draw a filled rectangle with a fix color, or with a vertical or horizontal gradi
 
 ## Result
 
-`void`
+None.
 
 <!--
 ## Example

@@ -21,7 +21,7 @@ Draw horizontal and vertical lines.
 
 ## Result
 
-`void`
+None.
 
 <!--
 ## Example

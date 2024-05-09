@@ -21,7 +21,7 @@ Push a single pixel at an arbitrary position or draw a pixel blended with the sc
 
 ## Result
 
-* `void`
+* None, or
 * `uint16_t`: The pixel color after alpha blending.
 
 <!--

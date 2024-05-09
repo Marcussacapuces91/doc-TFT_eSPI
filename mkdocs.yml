@@ -58,9 +58,12 @@ nav:
       - tft_espi/methods/drawline.md
       - tft_espi/methods/drawpixel.md
       - tft_espi/methods/fillrect.md
+      - tft_espi/methods/fillscreen.md
       - tft_espi/methods/height_width.md
       - tft_espi/methods/init.md
       - tft_espi/methods/readpixel.md
+      - tft_espi/methods/setcursor.md
+      - tft_espi/methods/settextcolor.md
       - tft_espi/methods/setviewport.md
   - Header file TFT_eSPRITE.h:
     - Class: tft_esprite.md

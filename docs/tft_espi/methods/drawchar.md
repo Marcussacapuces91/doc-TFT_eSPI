@@ -25,7 +25,7 @@ Draw a single character in the GLCD or GFXFF font or a Unicode glyph onto the sc
 
 ## Result
 
-* `void`
+* None,
 * `int16_t`: ???
 
 <!--

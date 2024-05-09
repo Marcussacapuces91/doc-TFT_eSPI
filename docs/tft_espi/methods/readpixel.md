@@ -12,7 +12,7 @@ Read 565 pixel colours from a pixel.
 
 ## Parameters
 
-* `int32_t` x0: x coord;
+* `int32_t` x0: x coord.
 * `int32_t` y0: y coord.
 
 ## Result
