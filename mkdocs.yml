@@ -16,6 +16,7 @@ plugins:
         python:
           options:
             docstring_style: sphinx
+
 markdown_extensions:
   - markdown_include.include:
       base_path: .
@@ -42,15 +43,16 @@ nav:
   - 'Touch and Input': inputs.md
   - 'Advanced Topics': advanced.md
   - 'Examples and Resources': examples.md
-  - TFT_eSPI:
-    - tft_espi/index.md
+  - 'Header file TFT_eSPI.h':
+    - 'File content': tft_espi/index.md
     - Colors: tft_espi/colors.md
     - Datums: tft_espi/datums.md
     - Class: tft_espi/class.md
-    - Methods:
+    - Public methods:
       - tft_espi/methods/constructor.md
       - tft_espi/methods/begin.md
       - tft_espi/methods/drawarc.md
+      - tft_espi/methods/drawbitmap.md
       - tft_espi/methods/drawchar.md
       - tft_espi/methods/drawfastline.md
       - tft_espi/methods/drawline.md
@@ -60,5 +62,5 @@ nav:
       - tft_espi/methods/init.md
       - tft_espi/methods/readpixel.md
       - tft_espi/methods/setviewport.md
-  - TFT_eSPRITE:
+  - Header file TFT_eSPRITE.h:
     - Class: tft_esprite.md

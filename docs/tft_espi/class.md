@@ -23,9 +23,9 @@ title: Class TFT_eSPI
 
 ### Draw anything
 
-* `void drawArc(int32_t x, int32_t y, int32_t r, int32_t ir, uint32_t startAngle, uint32_t endAngle, uint32_t fg_color, uint32_t bg_color, bool smoothArc = true)`
-* `void drawBitmap( int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t fgcolor)`
-* `void drawBitmap( int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t fgcolor, uint16_t bgcolor)`
+* [`void drawArc(int32_t x, int32_t y, int32_t r, int32_t ir, uint32_t startAngle, uint32_t endAngle, uint32_t fg_color, uint32_t bg_color, bool smoothArc = true)`](methods/drawarc.md)
+* [`void drawBitmap( int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t fgcolor)`](methods/drawbitmap.md)
+* [`void drawBitmap( int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t fgcolor, uint16_t bgcolor)`](methods/drawbitmap.md)
 * `int16_t drawCentreString(const char *string, int32_t x, int32_t y, uint8_t font)`
 * `int16_t drawCentreString(const String& string, int32_t x, int32_t y, uint8_t font)`
 * [`void drawChar(int32_t x, int32_t y, uint16_t c, uint32_t color, uint32_t bg, uint8_t size)`](methods/drawchar.md)

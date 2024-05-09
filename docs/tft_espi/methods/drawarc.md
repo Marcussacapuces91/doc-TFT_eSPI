@@ -8,10 +8,12 @@ Draw an arc clockwise from 6 o'clock position.
 
 ## Signature
 
-`void TFT_eSPI::drawArc(int32_t x, int32_t y, int32_t r, int32_t ir,
-                       uint32_t startAngle, uint32_t endAngle,
-                       uint32_t fg_color, uint32_t bg_color,
-                       bool smooth)`
+``` c
+void drawArc(int32_t x, int32_t y, int32_t r, int32_t ir,
+             uint32_t startAngle, uint32_t endAngle,
+             uint32_t fg_color, uint32_t bg_color,
+             bool smoothArc = true)
+```
 
 ## Parameters
 
@@ -31,6 +33,10 @@ Draw an arc clockwise from 6 o'clock position.
 
 <!--
 ## Example
+
+``` md
+{ !docs/examples.md! }
+```
 
 Cpp example of method in the context. Including all needed `#include`
 
