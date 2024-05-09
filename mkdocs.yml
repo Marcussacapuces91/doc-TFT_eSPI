@@ -44,6 +44,7 @@ nav:
   - 'Examples and Resources': examples.md
   - TFT_eSPI:
     - Colors: tft_espi/colors.md
+    - Datums: tft_espi/datums.md
     - Class: tft_espi/class.md
     - Methods:
       - tft_espi/methods/constructor.md
