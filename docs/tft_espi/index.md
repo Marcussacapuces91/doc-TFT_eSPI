@@ -17,11 +17,9 @@ Last review/edit by Bodmer: 04/02/22
 ``` C
    #define TFT_ESPI_VERSION "2.5.43"
 
-Bit level feature flags
-Bit 0 set: viewport capability
-```
+    Bit level feature flags
+    Bit 0 set: viewport capability
 
-``` C
    #define TFT_ESPI_FEATURES 1
 ```
 
