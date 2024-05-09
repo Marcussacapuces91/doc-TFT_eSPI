@@ -19,6 +19,7 @@ Read 565 pixel colours from a pixel.
 
 `uint16_t`: the [color](../colors.md) in 565 bits.
 
+<!--
 ## Example
 
 Cpp example of method in the context. Including all needed `#include`
@@ -27,3 +28,4 @@ Cpp example of method in the context. Including all needed `#include`
 #include <TFT_eSPI.h>
 
 ```
+-->

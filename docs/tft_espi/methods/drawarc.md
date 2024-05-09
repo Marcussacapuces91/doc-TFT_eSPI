@@ -9,10 +9,10 @@ Draw an arc clockwise from 6 o'clock position.
 ## Signature
 
 ``` c
-void drawArc(int32_t x, int32_t y, int32_t r, int32_t ir,
-             uint32_t startAngle, uint32_t endAngle,
-             uint32_t fg_color, uint32_t bg_color,
-             bool smoothArc = true)
+void TFT_eSPI::drawArc(int32_t x, int32_t y, int32_t r, int32_t ir,
+                       uint32_t startAngle, uint32_t endAngle,
+                       uint32_t fg_color, uint32_t bg_color,
+                       bool smoothArc = true)
 ```
 
 ## Parameters
@@ -23,8 +23,8 @@ void drawArc(int32_t x, int32_t y, int32_t r, int32_t ir,
 * `ìnt32_t` ir: Arc inner radius. Inclusive, so arc thickness = r-ir+1. 
 * `uint32_t` startAngle: Start angle [0..360].
 * `uint32_t` endAngle: End angle [0..360].
-* `uint32_t` fg_color: [Foreground color](../colors.md). Arc foreground fg_color anti-aliased with background colour along sides
-* `uint32_t` bg_color: [Background color](../colors.md).
+* `uint32_t` [fg_color](../colors.md): Foreground color. Arc foreground fg_color anti-aliased with background colour along sides
+* `uint32_t` [bg_color](../colors.md): Background color.
 * `bool` smooth: Optional, default is true, smooth=false means no antialiasing
 
 ## Result

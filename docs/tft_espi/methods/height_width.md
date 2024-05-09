@@ -19,6 +19,7 @@ None.
 
 `ìnt16_t`: Height or width in pixels.
 
+<!--
 ## Example
 
 Cpp example of method in the context. Including all needed `#include`
@@ -27,3 +28,4 @@ Cpp example of method in the context. Including all needed `#include`
 #include <TFT_eSPI.h>
 
 ```
+-->

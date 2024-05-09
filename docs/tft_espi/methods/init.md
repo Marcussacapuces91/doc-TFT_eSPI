@@ -1,5 +1,5 @@
 ---
-title: 'TFT_eSPI::init'
+title: TFT_eSPI::init
 ---
 
 ## Description
@@ -8,11 +8,11 @@ title: 'TFT_eSPI::init'
 
 ## Signature
 
-`void init(uint8_t tc = TAB_COLOUR)`
+`void TFT_eSPI::init(uint8_t tc = TAB_COLOUR)`
 
 ## Parameters
 
-`uint8_t tc` : default to `TAB_COLOUR` ; tab colour option is for ST7735 displays only.
+`uint8_t` tc: default to `TAB_COLOUR` ; tab colour option is for ST7735 displays only.
 
 ## Result
 

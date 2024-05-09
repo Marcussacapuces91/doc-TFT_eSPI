@@ -1,5 +1,5 @@
 ---
-title: 'TFT_eSPI::begin'
+title: TFT_eSPI::begin
 ---
 
 ## Description
@@ -8,7 +8,7 @@ title: 'TFT_eSPI::begin'
 
 ## Signature
 
-`void begin(uint8_t tc = TAB_COLOUR)`
+`void TFT_eSPI::begin(uint8_t tc = TAB_COLOUR)`
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Set the clipping region for the TFT screen
 
 ## Signature
 
-`void setViewport(int32_t x, int32_t y, int32_t w, int32_t h, bool vpDatum)`
+`void TFT_eSPI::setViewport(int32_t x, int32_t y, int32_t w, int32_t h, bool vpDatum)`
 
 ## Parameters
 
@@ -22,6 +22,7 @@ Set the clipping region for the TFT screen
 
 `void`
 
+<!--
 ## Example
 
 Cpp example of method in the context. Including all needed `#include`
@@ -30,3 +31,4 @@ Cpp example of method in the context. Including all needed `#include`
 #include <TFT_eSPI.h>
 
 ```
+-->

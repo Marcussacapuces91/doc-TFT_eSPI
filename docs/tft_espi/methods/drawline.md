@@ -8,7 +8,7 @@ Draw a line between 2 arbitrary points using Bresenham's algorithm.
 
 ## Signature
 
-`void drawLine(int32_t x0, int32_t y0, int32_t x1, int32_t y1, uint32_t color)`
+`void TFT_eSPI::drawLine(int32_t x0, int32_t y0, int32_t x1, int32_t y1, uint32_t color)`
 
 ## Parameters
 
@@ -16,12 +16,13 @@ Draw a line between 2 arbitrary points using Bresenham's algorithm.
 * `ìnt32_t` y0: y coord from.
 * `ìnt32_t` x1: x coord to.
 * `ìnt32_t` y1: y coord to.
-* `uìnt32_t` color: [line color](../colors.md).
+* `uìnt32_t` [color](../colors.md): line color.
 
 ## Result
 
 `void`
 
+<!--
 ## Example
 
 Cpp example of method in the context. Including all needed `#include`
@@ -30,3 +31,4 @@ Cpp example of method in the context. Including all needed `#include`
 #include <TFT_eSPI.h>
 
 ```
+-->

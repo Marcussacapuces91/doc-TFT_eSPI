@@ -8,16 +8,16 @@ Push a single pixel at an arbitrary position or draw a pixel blended with the sc
 
 ## Signature
 
-* `void drawPixel(int32_t x, int32_t y, uint32_t color)`
-* `uint16_t drawPixel(int32_t x, int32_t y, uint32_t color, uint8_t alpha, uint32_t bg_color)`
+* `void TFT_eSPI::drawPixel(int32_t x, int32_t y, uint32_t color)`
+* `uint16_t TFT_eSPI::drawPixel(int32_t x, int32_t y, uint32_t color, uint8_t alpha, uint32_t bg_color)`
 
 ## Parameters
 
-* `int32_t x`: x coord.
-* `int32_t y`: y coord.
-* `uint32_t color`: [pixel color](../colors.md).
-* `uint8_t alpha`: Alpha blended value in [0..255].
-* `uint32_t bg_color`: [background color](../colors.md).
+* `int32_t` x: x coord.
+* `int32_t` y: y coord.
+* `uint32_t` [color](../colors.md): Pixel color.
+* `uint8_t` alpha: Alpha blended value in [0..255].
+* `uint32_t` [bg_color](../colors.md): Background color.
 
 ## Result
 
