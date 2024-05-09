@@ -23,15 +23,58 @@ title: Class TFT_eSPI
 
 ### Draw anything
 
-* [`void drawPixel(int32_t x, int32_t y, uint32_t color)`](methods/drawpixel.md)
-* [`uint16_t drawPixel(int32_t x, int32_t y, uint32_t color, uint8_t alpha, uint32_t bg_color)`](methods/drawpixel.md)
+* `void drawArc(int32_t x, int32_t y, int32_t r, int32_t ir, uint32_t startAngle, uint32_t endAngle, uint32_t fg_color, uint32_t bg_color, bool smoothArc = true)`
+* `void drawBitmap( int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t fgcolor)`
+* `void drawBitmap( int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t fgcolor, uint16_t bgcolor)`
+* `int16_t drawCentreString(const char *string, int32_t x, int32_t y, uint8_t font)`
+* `int16_t drawCentreString(const String& string, int32_t x, int32_t y, uint8_t font)`
 * [`void drawChar(int32_t x, int32_t y, uint16_t c, uint32_t color, uint32_t bg, uint8_t size)`](methods/drawchar.md)
 * [`int16_t drawChar(uint16_t uniCode, int32_t x, int32_t y)`](methods/drawchar.md)
 * [`int16_t drawChar(uint16_t uniCode, int32_t x, int32_t y, uint8_t font)`](methods/drawchar.md)
-* [`void drawLine(int32_t xs, int32_t ys, int32_t xe, int32_t ye, uint32_t color)`](methods/drawline.md)
+* `void drawCircle(int32_t x, int32_t y, int32_t r, uint32_t color)`
+* `void drawCircleHelper(int32_t x, int32_t y, int32_t r, uint8_t cornername, uint32_t color)`
+* `void drawEllipse(int16_t x, int16_t y, int32_t rx, int32_t ry, uint16_t color)`
 * [`void drawFastVLine(int32_t x, int32_t y, int32_t h, uint32_t color)`](methods/drawfastline.md)
 * [`void drawFastHLine(int32_t x, int32_t y, int32_t w, uint32_t color)`](methods/drawfastline.md)
+* `int16_t drawFloat(float floatNumber, uint8_t decimal, int32_t x, int32_t y, uint8_t font)`
+* `int16_t drawFloat(float floatNumber, uint8_t decimal, int32_t x, int32_t y)`
+* [`void drawLine(int32_t xs, int32_t ys, int32_t xe, int32_t ye, uint32_t color)`](methods/drawline.md)
+* `int16_t drawNumber(long intNumber, int32_t x, int32_t y, uint8_t font)`
+* `int16_t drawNumber(long intNumber, int32_t x, int32_t y)`
+* [`void drawPixel(int32_t x, int32_t y, uint32_t color)`](methods/drawpixel.md)
+* `uint16_t drawPixel(int32_t x, int32_t y, uint32_t color, uint8_t alpha, uint32_t bg_color = 0x00FFFFFF)`
+* [`uint16_t drawPixel(int32_t x, int32_t y, uint32_t color, uint8_t alpha, uint32_t bg_color)`](methods/drawpixel.md)
+* `void drawRect(int32_t x, int32_t y, int32_t w, int32_t h, uint32_t color)`
+* `int16_t drawRightString(const char *string, int32_t x, int32_t y, uint8_t font)`
+* `int16_t drawRightString(const String& string, int32_t x, int32_t y, uint8_t font)`
+* `void drawRoundRect(int32_t x, int32_t y, int32_t w, int32_t h, int32_t radius, uint32_t color)`
+* `void drawSmoothArc(int32_t x, int32_t y, int32_t r, int32_t ir, uint32_t startAngle, uint32_t endAngle, uint32_t fg_color, uint32_t bg_color, bool roundEnds = false)`
+* `void drawSmoothCircle(int32_t x, int32_t y, int32_t r, uint32_t fg_color, uint32_t bg_color)`
+* `void drawSmoothRoundRect(int32_t x, int32_t y, int32_t r, int32_t ir, int32_t w, int32_t h, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF, uint8_t quadrants = 0xF)`
+* `void drawSpot(float ax, float ay, float r, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF)`
+* `int16_t drawString(const char *string, int32_t x, int32_t y, uint8_t font)`
+* `int16_t drawString(const char *string, int32_t x, int32_t y)`
+* `int16_t drawString(const String& string, int32_t x, int32_t y, uint8_t font)`
+* `int16_t drawString(const String& string, int32_t x, int32_t y)`
+* `void drawTriangle(int32_t x1,int32_t y1, int32_t x2,int32_t y2, int32_t x3,int32_t y3, uint32_t color)`
+* `void drawWedgeLine(float ax, float ay, float bx, float by, float aw, float bw, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF)`
+* `void drawWideLine(float ax, float ay, float bx, float by, float wd, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF)`
+* `void drawXBitmap(int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t fgcolor)`
+* `void drawXBitmap(int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t fgcolor, uint16_t bgcolor)`
+
+### Fill anything
+ 
+* `void fillCircle(int32_t x, int32_t y, int32_t r, uint32_t color)`
+* `void fillCircleHelper(int32_t x, int32_t y, int32_t r, uint8_t cornername, int32_t delta, uint32_t color)`
+* `void fillEllipse(int16_t x, int16_t y, int32_t rx, int32_t ry, uint16_t color)`
 * [`void fillRect(int32_t x, int32_t y, int32_t w, int32_t h, uint32_t color)`](methods/fillrect.md)
+* `void fillRectVGradient(int16_t x, int16_t y, int16_t w, int16_t h, uint32_t color1, uint32_t color2)`
+* `void fillRectHGradient(int16_t x, int16_t y, int16_t w, int16_t h, uint32_t color1, uint32_t color2)`
+* `void fillRoundRect(int32_t x, int32_t y, int32_t w, int32_t h, int32_t radius, uint32_t color)`
+* `void fillSmoothCircle(int32_t x, int32_t y, int32_t r, uint32_t color, uint32_t bg_color = 0x00FFFFFF)`
+* `void fillSmoothRoundRect(int32_t x, int32_t y, int32_t w, int32_t h, int32_t radius, uint32_t color, uint32_t bg_color = 0x00FFFFFF)`
+* `void fillScreen(uint32_t color)`
+* `void fillTriangle(int32_t x1,int32_t y1, int32_t x2,int32_t y2, int32_t x3,int32_t y3, uint32_t color)`
 
 ### Get screen height/width
 
@@ -42,11 +85,28 @@ title: Class TFT_eSPI
 
 * [`virtual uint16_t readPixel(int32_t x, int32_t y)`](methods/readpixel.md)
 
+### Viewport
+
+* [`void setViewport(int32_t x, int32_t y, int32_t w, int32_t h, bool vpDatum = true)`](methods/setviewport.md)
+* `bool checkViewport(int32_t x, int32_t y, int32_t w, int32_t h)`
+* `int32_t getViewportX(void)`
+* `int32_t getViewportY(void)`
+* `int32_t getViewportWidth(void)`
+* `int32_t getViewportHeight(void)`
+* `bool getViewportDatum(void)`
+* `void frameViewport(uint16_t color, int32_t w)`
+* `void resetViewport(void)`
+
+### Window
+
+* `virtual void setWindow(int32_t xs, int32_t ys, int32_t xe, int32_t ye)`
+* `void setAddrWindow(int32_t xs, int32_t ys, int32_t w, int32_t h)`
+* `bool clipAddrWindow(int32_t* x, int32_t* y, int32_t* w, int32_t* h)`
+* `bool clipWindow(int32_t* xs, int32_t* ys, int32_t* xe, int32_t* ye)`
 
 <!--
 ### what ? 
 
-* virtual void setWindow(int32_t xs, int32_t ys, int32_t xe, int32_t ye)
 * virtual void pushColor(uint16_t color)
 * virtual void begin_nin_write()
 * virtual void end_nin_write()
@@ -56,18 +116,6 @@ title: Class TFT_eSPI
 * int32_t getOriginX(void)
 * int32_t getOriginY(void)
 * void invertDisplay(bool i)
-* void setAddrWindow(int32_t xs, int32_t ys, int32_t w, int32_t h)
-* void setViewport(int32_t x, int32_t y, int32_t w, int32_t h, bool vpDatum = true)
-* bool checkViewport(int32_t x, int32_t y, int32_t w, int32_t h)
-* int32_t getViewportX(void)
-* int32_t getViewportY(void)
-* int32_t getViewportWidth(void)
-* int32_t getViewportHeight(void)
-* bool getViewportDatum(void)
-* void frameViewport(uint16_t color, int32_t w)
-* void resetViewport(void)
-* bool clipAddrWindow(int32_t* x, int32_t* y, int32_t* w, int32_t* h)
-* bool clipWindow(int32_t* xs, int32_t* ys, int32_t* xe, int32_t* ye)
 * void pushColor(uint16_t color, uint32_t len)
 * void pushColors(uint16_t  *data, uint32_t len, bool swap = true)
 * void pushColors(uint8_t  *data, uint32_t len)
@@ -76,36 +124,10 @@ title: Class TFT_eSPI
 * uint8_t tft_Read_8(void)
 * void begin_SDA_Read(void)
 * void end_SDA_Read(void)
-* void fillScreen(uint32_t color)
-* void drawRect(int32_t x, int32_t y, int32_t w, int32_t h, uint32_t color)
-* void drawRoundRect(int32_t x, int32_t y, int32_t w, int32_t h, int32_t radius, uint32_t color)
-* void fillRoundRect(int32_t x, int32_t y, int32_t w, int32_t h, int32_t radius, uint32_t color)
-* void fillRectVGradient(int16_t x, int16_t y, int16_t w, int16_t h, uint32_t color1, uint32_t color2)
-* void fillRectHGradient(int16_t x, int16_t y, int16_t w, int16_t h, uint32_t color1, uint32_t color2)
-* void drawCircle(int32_t x, int32_t y, int32_t r, uint32_t color)
-* void drawCircleHelper(int32_t x, int32_t y, int32_t r, uint8_t cornername, uint32_t color)
-* void fillCircle(int32_t x, int32_t y, int32_t r, uint32_t color)
-* void fillCircleHelper(int32_t x, int32_t y, int32_t r, uint8_t cornername, int32_t delta, uint32_t color)
-* void drawEllipse(int16_t x, int16_t y, int32_t rx, int32_t ry, uint16_t color)
-* void fillEllipse(int16_t x, int16_t y, int32_t rx, int32_t ry, uint16_t color)
-* void drawTriangle(int32_t x1,int32_t y1, int32_t x2,int32_t y2, int32_t x3,int32_t y3, uint32_t color)
-* void fillTriangle(int32_t x1,int32_t y1, int32_t x2,int32_t y2, int32_t x3,int32_t y3, uint32_t color)
-* uint16_t drawPixel(int32_t x, int32_t y, uint32_t color, uint8_t alpha, uint32_t bg_color = 0x00FFFFFF)
-* void drawSmoothArc(int32_t x, int32_t y, int32_t r, int32_t ir, uint32_t startAngle, uint32_t endAngle, uint32_t fg_color, uint32_t bg_color, bool roundEnds = false)
-* void drawArc(int32_t x, int32_t y, int32_t r, int32_t ir, uint32_t startAngle, uint32_t endAngle, uint32_t fg_color, uint32_t bg_color, bool smoothArc = true)
-* void drawSmoothCircle(int32_t x, int32_t y, int32_t r, uint32_t fg_color, uint32_t bg_color)
-* void fillSmoothCircle(int32_t x, int32_t y, int32_t r, uint32_t color, uint32_t bg_color = 0x00FFFFFF)
-* void drawSmoothRoundRect(int32_t x, int32_t y, int32_t r, int32_t ir, int32_t w, int32_t h, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF, uint8_t quadrants = 0xF)
-* void fillSmoothRoundRect(int32_t x, int32_t y, int32_t w, int32_t h, int32_t radius, uint32_t color, uint32_t bg_color = 0x00FFFFFF)
-* void drawSpot(float ax, float ay, float r, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF)
-* void drawWideLine(float ax, float ay, float bx, float by, float wd, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF)
-* void drawWedgeLine(float ax, float ay, float bx, float by, float aw, float bw, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF)
+
+
 * void setSwapBytes(bool swap)
 * bool getSwapBytes(void)
-* void drawBitmap( int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t fgcolor)
-* void drawBitmap( int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t fgcolor, uint16_t bgcolor)
-* void drawXBitmap(int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t fgcolor)
-* void drawXBitmap(int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t fgcolor, uint16_t bgcolor)
 * void setBitmapColor(uint16_t fgcolor, uint16_t bgcolor)
 * void setPivot(int16_t x, int16_t y)
 * int16_t getPivotX(void)
@@ -121,18 +143,6 @@ title: Class TFT_eSPI
 * void pushImage(int32_t x, int32_t y, int32_t w, int32_t h, const uint8_t *data, bool bpp8,  uint16_t *cmap = nullptr)
 * void pushMaskedImage(int32_t x, int32_t y, int32_t w, int32_t h, uint16_t *img, uint8_t *mask)
 * void readRectRGB(int32_t x, int32_t y, int32_t w, int32_t h, uint8_t *data)
-* int16_t drawNumber(long intNumber, int32_t x, int32_t y, uint8_t font)
-* int16_t drawNumber(long intNumber, int32_t x, int32_t y)
-* int16_t drawFloat(float floatNumber, uint8_t decimal, int32_t x, int32_t y, uint8_t font)
-* int16_t drawFloat(float floatNumber, uint8_t decimal, int32_t x, int32_t y)
-* int16_t drawString(const char *string, int32_t x, int32_t y, uint8_t font)
-* int16_t drawString(const char *string, int32_t x, int32_t y)
-* int16_t drawString(const String& string, int32_t x, int32_t y, uint8_t font)
-* int16_t drawString(const String& string, int32_t x, int32_t y)
-* int16_t drawCentreString(const char *string, int32_t x, int32_t y, uint8_t font)
-* int16_t drawRightString(const char *string, int32_t x, int32_t y, uint8_t font)
-* int16_t drawCentreString(const String& string, int32_t x, int32_t y, uint8_t font)
-* int16_t drawRightString(const String& string, int32_t x, int32_t y, uint8_t font)
 * void setCursor(int16_t x, int16_t y)
 * void setCursor(int16_t x, int16_t y, uint8_t font)
 * int16_t  getCursorX(void)
@@ -344,14 +354,14 @@ Protected attributs
 #ifdef TOUCH_CS
   #if defined (TFT_PARALLEL_8_BIT) || defined (RP2040_PIO_INTERFACE)
     #if !defined(DISABLE_ALL_LIBRARY_WARNINGS)
-      #error >>>>------>> Touch functions not supported in 8/16-bit parallel mode or with RP2040 PIO.
+      #error >>>>->> Touch functions not supported in 8/16-bit parallel mode or with RP2040 PIO.
     #endif
   #else
     #include "Extensions/Touch.h"        // Loaded if TOUCH_CS is defined by user
   #endif
 #else
     #if !defined(DISABLE_ALL_LIBRARY_WARNINGS)
-      #warning >>>>------>> TOUCH_CS pin not defined, TFT_eSPI touch functions will not be available!
+      #warning >>>>->> TOUCH_CS pin not defined, TFT_eSPI touch functions will not be available!
     #endif
 #endif
 
