@@ -9,36 +9,44 @@ Read the Docs Dashboard: https://beta.readthedocs.org/projects/doc-tft-espi/
 
 ------
 
-:books:[docs/](https://github.com/Marcussacapuces91/doc-TFT_eSPI/tree/main/docs)<br>
+### :books:[docs/](https://github.com/Marcussacapuces91/doc-TFT_eSPI/tree/main/docs)
+
 The various files are mainly in Markdown format as the source of the documentation. They are "compiled" with
 [MkDocs](https://mkdocs.readthedocs.io/en/stable/) before being published on the
 [Read the Docs](https://doc-tft-espi.readthedocs.io/) website.
 
-:gear:[.readthedocs.yaml](https://github.com/Marcussacapuces91/doc-TFT_eSPI/blob/main/.readthedocs.yaml)<br>
+### :gear:[.readthedocs.yaml](https://github.com/Marcussacapuces91/doc-TFT_eSPI/blob/main/.readthedocs.yaml)
+
 Read the Docs Build configuration is stored in `.readthedocs.yaml`.
 
-:gear:[mkdocs.yml](https://github.com/Marcussacapuces91/doc-TFT_eSPI/blob/main/mkdocs.yml)<br>
+### :gear:[mkdocs.yml](https://github.com/Marcussacapuces91/doc-TFT_eSPI/blob/main/mkdocs.yml)
+
 This file allows the [configuration](https://www.mkdocs.org/user-guide/configuration/) of MkDocs behavior, particularly
 the implementation of Markdown or MkDocs extensions.
 
-:round_pushpin:[docs/requirements.txt](https://github.com/Marcussacapuces91/doc-TFT_eSPI/blob/main/docs/requirements.txt) 
-and [docs/requirements.in](https://github.com/Marcussacapuces91/doc-TFT_eSPI/blob/main/docs/requirements.in)<br>
+### :round_pushpin:[docs/requirements.txt](https://github.com/Marcussacapuces91/doc-TFT_eSPI/blob/main/docs/requirements.txt) 
+and [docs/requirements.in](https://github.com/Marcussacapuces91/doc-TFT_eSPI/blob/main/docs/requirements.in)
+
 Python dependencies are [pinned](https://docs.readthedocs.io/en/latest/guides/reproducible-builds.html)
 (uses [pip-tools](https://pip-tools.readthedocs.io/en/latest/)) here. Make sure to add your Python dependencies to
 `requirements.txt` or if you choose [pip-tools](https://pip-tools.readthedocs.io/en/latest/), edit
 `docs/requirements.in` and remember to run `pip-compile docs/requirements.in`.
 
-:scroll:[README.md](https://github.com/readthedocs-examples/example-mkdocs-basic/blob/main/README.md)<br>
+### :scroll:[README.md](https://github.com/readthedocs-examples/example-mkdocs-basic/blob/main/README.md)
+
 Contents of this `README.md` are visible on GitHub only and **not** included on 
 [the documentation index page](https://doc-tft-espi.readthedocs.io).
 
-:interrobang:Questions / comments<br>
+### :interrobang:Questions / comments
+
 If you have questions related to this example, feel free to can ask them as a GitHub issue
 [here](https://github.com/Marcussacapuces91/doc-TFT_eSPI/issues).
 
-:handshake:Contributing<br>
-You are encouraged to contribute to this documentation project. You can submit pull requests or report issues on the
-GitHub repository.
+### :handshake:Contributing
+
+You are encouraged to contribute to this documentation project. You can submit
+[pull requests](https://github.com/Marcussacapuces91/doc-TFT_eSPI/pulls) or
+[report issues](https://github.com/Marcussacapuces91/doc-TFT_eSPI/issues) on the GitHub repository.
 
 ## Example Project usage
 
