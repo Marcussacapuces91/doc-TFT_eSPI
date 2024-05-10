@@ -6,10 +6,12 @@ title: TFT_eSPI::drawPixel
 
 Push a single pixel at an arbitrary position or draw a pixel blended with the screen or bg pixel colour.
 
+If the bg_color is not specified, the background pixel colour will be read from TFT or sprite.
+
 ## Signature
 
 * `void TFT_eSPI::drawPixel(int32_t x, int32_t y, uint32_t color)`
-* `uint16_t TFT_eSPI::drawPixel(int32_t x, int32_t y, uint32_t color, uint8_t alpha, uint32_t bg_color)`
+* `uint16_t TFT_eSPI::drawPixel(int32_t x, int32_t y, uint32_t color, uint8_t alpha, uint32_t bg_color = 0x00FFFFFF)`
 
 ## Parameters
 
@@ -17,7 +19,7 @@ Push a single pixel at an arbitrary position or draw a pixel blended with the sc
 * `int32_t` y: y coord.
 * `uint32_t` [color](../colors.md): Pixel color.
 * `uint8_t` alpha: Alpha blended value in [0..255].
-* `uint32_t` [bg_color](../colors.md): Background color.
+* `uint32_t` [bg_color](../colors.md): Background color, default to read the background pixel.
 
 ## Result
 

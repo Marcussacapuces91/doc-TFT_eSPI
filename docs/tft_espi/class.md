@@ -42,8 +42,7 @@ title: Class TFT_eSPI
 * `int16_t drawNumber(long intNumber, int32_t x, int32_t y, uint8_t font)`
 * `int16_t drawNumber(long intNumber, int32_t x, int32_t y)`
 * [`void drawPixel(int32_t x, int32_t y, uint32_t color)`](methods/drawpixel.md)
-* `uint16_t drawPixel(int32_t x, int32_t y, uint32_t color, uint8_t alpha, uint32_t bg_color = 0x00FFFFFF)`
-* [`uint16_t drawPixel(int32_t x, int32_t y, uint32_t color, uint8_t alpha, uint32_t bg_color)`](methods/drawpixel.md)
+* [`uint16_t drawPixel(int32_t x, int32_t y, uint32_t color, uint8_t alpha, uint32_t bg_color = 0x00FFFFFF)`](methods/drawpixel.md)
 * `void drawRect(int32_t x, int32_t y, int32_t w, int32_t h, uint32_t color)`
 * `int16_t drawRightString(const char *string, int32_t x, int32_t y, uint8_t font)`
 * `int16_t drawRightString(const String& string, int32_t x, int32_t y, uint8_t font)`
