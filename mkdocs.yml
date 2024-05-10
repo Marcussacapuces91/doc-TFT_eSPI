@@ -53,6 +53,7 @@ nav:
       - tft_espi/methods/begin.md
       - tft_espi/methods/drawarc.md
       - tft_espi/methods/drawbitmap.md
+      - tft_espi/methods/drawcentrestring.md
       - tft_espi/methods/drawchar.md
       - tft_espi/methods/drawfastline.md
       - tft_espi/methods/drawline.md
