@@ -70,3 +70,7 @@ nav:
       - tft_espi/methods/setviewport.md
   - Header file TFT_eSPRITE.h:
     - Class: tft_esprite.md
+
+# Only mkdocs >= 1.6
+# exclude_docs: |
+#   docs/examples/*.md

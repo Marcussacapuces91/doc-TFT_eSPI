@@ -20,4 +20,4 @@ None.
 
 ## Example
 
-{!docs/examples/getsettextdatum.md!}
+{!docs/examples/.getsettextdatum.md!}
