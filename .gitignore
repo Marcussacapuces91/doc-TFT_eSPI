@@ -127,5 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Source code
 /docs/TFT_eSPI.cpp
 /docs/TFT_eSPI.h
+
+# .idea
+/.idea/
