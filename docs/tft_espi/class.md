@@ -113,6 +113,10 @@ title: Class TFT_eSPI
 * `int16_t  getCursorX(void)`
 * `int16_t  getCursorY(void)`
 
+### Alignment / Datum
+
+* [`uint8_t getTextDatum(void)`](methods/gettextdatum.md)
+* [`void setTextDatum(uint8_t datum)`](methods/settextdatum.md)
 
 <!--
 ### what ? 
@@ -155,8 +159,6 @@ title: Class TFT_eSPI
 * void readRectRGB(int32_t x, int32_t y, int32_t w, int32_t h, uint8_t *data)
 * void setTextSize(uint8_t size)
 * void setTextWrap(bool wrapX, bool wrapY = false)
-* void setTextDatum(uint8_t datum)
-* uint8_t getTextDatum(void)
 * void setTextPadding(uint16_t x_width)
 * uint16_t getTextPadding(void)
 * void setFreeFont(const GFXfont *f = NULL)
