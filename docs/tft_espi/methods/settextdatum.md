@@ -17,3 +17,7 @@ Set the text position reference datum.
 ## Result
 
 None.
+
+## Example
+
+{!docs/examples/getsettextdatum.md!}

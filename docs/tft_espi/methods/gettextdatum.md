@@ -17,3 +17,7 @@ None.
 ## Result
 
 `uint8_t`: The text datum value (see [datums](../datums.md)).
+
+## Example
+
+{!docs/examples/getsettextdatum.md!}

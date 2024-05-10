@@ -26,15 +26,36 @@ Draw a single character in the GLCD or GFXFF font or a Unicode glyph onto the sc
 ## Result
 
 * None,
-* `int16_t`: ???
+* `int16_t`: Returns the position of the cursor (x coord.) after drawing.
 
-<!--
 ## Example
 
-Cpp example of method in the context. Including all needed `#include`
-
-``` cpp
+```cpp
 #include <TFT_eSPI.h>
 
+TFT_eSPI tft = TFT_eSPI();
+
+void setup() {
+  tft.init();
+  tft.fillScreen(TFT_BLACK);
+  tft.setTextColor(TFT_WHITE);
+  tft.setTextSize(2);
+}
+
+void loop() {
+  tft.drawChar('H', 10, 10, 2); // Draw the character 'H' at position (10, 10) with font size 2
+  delay(1000);
+}
 ```
--->
+
+In this example, we first initialize the TFT display using `tft.init()`. We then set the background color to black and 
+the text color to white using `tft.fillScreen(TFT_BLACK)` and `tft.setTextColor(TFT_WHITE)`, respectively. We also set 
+the text size to 2 using `tft.setTextSize(2)`.
+
+Finally, in the `loop()` function, we use `tft.drawChar('H', 10, 10, 2)` to draw the character 'H' at position (10, 10)
+on the screen with font size 2. The `drawChar()` function takes four arguments: the character to be drawn, the 
+x-coordinate, the y-coordinate, and the font size.
+
+!!!Note
+    The `drawChar()` function is used to draw a single character on the screen, whereas the `println()` function is used
+    to print a string of characters.

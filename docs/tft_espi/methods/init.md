@@ -20,6 +20,4 @@ None.
 
 ## Example
 
-``` cpp
-{!docs/examples/helloword.h!}
-```
+{!docs/examples/helloword.md!}

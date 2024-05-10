@@ -17,6 +17,4 @@ title: TFT_eSPI::TFT_eSPI
 
 ## Example
 
-``` c
-{!docs/examples/helloword.h!}
-```
+{!docs/examples/helloword.md!}
