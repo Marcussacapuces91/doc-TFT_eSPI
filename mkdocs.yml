@@ -72,5 +72,5 @@ nav:
     - Class: tft_esprite.md
 
 # Only mkdocs >= 1.6
-# exclude_docs: |
-#   docs/examples/*.md
+exclude_docs: |
+  docs/examples/*.md
