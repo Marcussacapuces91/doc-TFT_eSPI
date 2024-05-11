@@ -62,6 +62,7 @@ nav:
       - tft_espi/methods/fillrect.md
       - tft_espi/methods/fillscreen.md
       - tft_espi/methods/gettextdatum.md
+      - tft_espi/methods/gettextpadding.md
       - tft_espi/methods/height_width.md
       - tft_espi/methods/init.md
       - tft_espi/methods/readpixel.md
