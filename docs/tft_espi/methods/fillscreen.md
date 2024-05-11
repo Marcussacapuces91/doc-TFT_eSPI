@@ -21,7 +21,7 @@ None.
 ## Example
 
 **Example 1:**
-{!docs/examples/.helloword.md!}
+{!docs/examples/helloword.md!}
 
 **Example 2:**
 ```cpp
