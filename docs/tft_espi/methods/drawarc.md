@@ -1,19 +1,29 @@
 ---
-title: TFT_eSPI::drawArc 
+title: TFT_eSPI::drawArc TFT_eSPI::drawSmoothArc 
 ---
 
 ## Description
 
-Draw an arc clockwise from 6 o'clock position.
+Draw an arc clockwise from 6 o'clock position ether anti-aliased or not.
+
+**Smooth** draws an anti-aliased arc between start and end angles. Arc ends are anti-aliased.
+
+By default the arc is drawn with square ends unless the `roundEnds` parameter is included and set true.
+
+Angle = 0 is at 6 o'clock position, 90 at 9 o'clock *etc*. The angles must be in range 0-360 or they will be clipped to 
+these limits. The start angle may be larger than the end angle. Arcs are always drawn clockwise from the start angle.
+
+**Not smooth** is as per `drawSmoothArc` except the ends of the arc are **not** anti-aliased, this facilitates dynamic 
+arc length changes with arc segments and ensures clean segment joints.
+
+The sides of the arc are anti-aliased by default. If smoothArc is false sides will **not** be anti-aliased.
 
 ## Signature
 
-``` c
-void TFT_eSPI::drawArc(int32_t x, int32_t y, int32_t r, int32_t ir,
-                       uint32_t startAngle, uint32_t endAngle,
-                       uint32_t fg_color, uint32_t bg_color,
-                       bool smoothArc = true)
-```
+* `void TFT_eSPI::drawArc(int32_t x, int32_t y, int32_t r, int32_t ir, uint32_t startAngle, uint32_t endAngle, 
+   uint32_t fg_color, uint32_t bg_color, bool smoothArc = true)
+* `void TFT_eSPI::drawSmoothArc(int32_t x, int32_t y, int32_t r, int32_t ir, uint32_t startAngle, uint32_t endAngle,
+   uint32_t fg_color, uint32_t bg_color, bool roundEnds = false)
 
 ## Parameters
 
@@ -23,13 +33,15 @@ void TFT_eSPI::drawArc(int32_t x, int32_t y, int32_t r, int32_t ir,
 * `ìnt32_t` ir: Arc inner radius. Inclusive, so arc thickness = r-ir+1. 
 * `uint32_t` startAngle: Start angle [0..360].
 * `uint32_t` endAngle: End angle [0..360].
-* `uint32_t` [fg_color](../colors.md): Foreground color. Arc foreground fg_color anti-aliased with background colour along sides
+* `uint32_t` [fg_color](../colors.md): Foreground color. Arc foreground fg_color anti-aliased with background colour
+   along sides.
 * `uint32_t` [bg_color](../colors.md): Background color.
-* `bool` smooth: Optional, default is true, smooth=false means no antialiasing
+* `bool` smoothArc: Optional, default is true, smoothArc=false means no antialiasing.
+* `bool` roundEnds: Optional, default is false, roundsEnds=false means anti-aliased straight end.
 
 ## Result
 
-`void`
+None.
 
 ## Example
 
