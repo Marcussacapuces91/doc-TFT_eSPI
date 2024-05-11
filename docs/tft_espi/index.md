@@ -14,19 +14,94 @@ Last review/edit by Bodmer: 04/02/22
 
 ## Constants
 
+### Version
 ``` C
-   #define TFT_ESPI_VERSION "2.5.43"
+#define TFT_ESPI_VERSION "2.5.43"
+```
 
-    Bit level feature flags
-    Bit 0 set: viewport capability
+### Bit level feature flags
+Bit 0 set: viewport capability
+``` C
+#define TFT_ESPI_FEATURES 1
+```
 
-   #define TFT_ESPI_FEATURES 1
+### Interface setup (default values)
+**`TAB_COLOUR` default to 0**
+Sketch defined tab colour option is for ST7735 displays only.
+``` C
+   #define TAB_COLOUR 0
+```
+
+**SPI frequency default to 2MHz**
+``` C
+#define SPI_FREQUENCY  20000000
+```
+
+**SPI read frequency default to 1MHz**
+``` C
+#define SPI_READ_FREQUENCY 10000000
+```
+
+**SPI mode**<br/>
+Default to 0 excepte for ST7789 that is using mode 3
+``` C
+#if defined(ST7789_DRIVER) || defined(ST7789_2_DRIVER)
+  #define TFT_SPI_MODE SPI_MODE3
+#else
+  #define TFT_SPI_MODE SPI_MODE0
+#endif
+```
+
+**SPI frequency for XPT2046 default to 2.5MHz**
+``` C
+#define SPI_TOUCH_FREQUENCY  2500000
+```
+
+**SPI busy check default to "no"**
+``` C
+#define SPI_BUSY_CHECK
+```
+
+**Regarding SDA Mode**
+If half duplex SDA mode is defined then MISO pin should be -1.
+``` C
+#ifdef TFT_SDA_READ
+  #ifdef TFT_MISO
+    #if TFT_MISO != -1
+      #undef TFT_MISO
+      #define TFT_MISO -1
+      #warning TFT_MISO set to -1
+    #endif
+  #endif
+#endif  
 ```
 
 ## Structures
 
+### `fontinfo`
+
+This is a structure to conveniently hold information on the default fonts. It stores pointer to font character image 
+address table, width table and height.
+
+``` C
+typedef struct {
+    const uint8_t *chartbl;
+    const uint8_t *widthtbl;
+    uint8_t height;
+    uint8_t baseline;
+    } fontinfo;
+```
+
+This structure is available as:
+``` C
+const PROGMEM fontinfo fontdata []
+```
+depending on the GLCD fonts effectively loaded.
+
+### `setup_t`
+
 This structure allows sketches to retrieve the user setup parameters at runtime by calling getSetup(), zero impact on
-code size unless used, mainly for diagnostics
+code size unless used, mainly for diagnostics.
 
 ``` C
    typedef struct
@@ -88,10 +163,10 @@ code size unless used, mainly for diagnostics
 
 ## Callback
 
-Callback prototype for smooth font pixel colour read
+Callback prototype for smooth font pixel colour read.
 
 ``` C
-   typedef uint16_t (*getColorCallback)(uint16_t x, uint16_t y);
+typedef uint16_t (*getColorCallback)(uint16_t x, uint16_t y);
 ```
 
 ## Class TFT_eSPI
