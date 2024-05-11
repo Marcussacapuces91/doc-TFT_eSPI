@@ -33,12 +33,15 @@ void loop() {
 ```
 
 In this example, we first set the text padding to 10 pixels using `tft.setTextPadding(10)`. We then draw a string
-"Hello" at position (10, 20) using `tft.drawString`. The padding will blank any area not covered by the string.
+"Hello" at position (10, 20) using [`tft.drawString`](drawstring.md). The padding will blank any area not covered by the
+string.
 
-We then get the current text padding using `tft.getTextPadding()` and print it to the serial console.
+We then get the current text padding using [`tft.getTextPadding()`](gettextpadding.md) and print it to the serial
+console.
 
 Finally, we change the text padding to 20 pixels using `tft.setTextPadding(20)` and draw another string "World" at
-position (10, 40) using `tft.drawString`. The new padding will be used to blank any area not covered by the string.
+position (10, 40) using  [`tft.drawString`](drawstring.md). The new padding will be used to blank any area not covered
+by the string.
 
-Note that the `setTextPadding` function sets the width of the padding in pixels, and the `getTextPadding` function
-returns the current padding width in pixels.
+Note that the [`setTextPadding`](settextpadding.md) function sets the width of the padding in pixels, and the 
+[`getTextPadding`](gettextpadding.md) function returns the current padding width in pixels.
