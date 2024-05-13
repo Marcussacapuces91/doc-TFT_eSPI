@@ -62,7 +62,7 @@ void loop() {
 }
 ```
 
-**functions used**:
+**functions used**: 
 
 * [TFT_eSPI::setTextSize()](tft_espi/methods/settextsize.md);
 * [TFT_eSPI::fillScreen()](tft_espi/methods/fillscreen.md);
