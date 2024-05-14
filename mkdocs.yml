@@ -3,7 +3,7 @@ site_description: Some docs to help you to use the TFT_eSPI library.
 # site_url:
 repo_url: https://github.com/Marcussacapuces91/doc-TFT_eSPI
 copyright: 'Copyright &copy; 2024 by Marc SIBERT'
-google_analytics: ['441017087','doc-tft-espi.readthedocs.io']
+google_analytics: ['G-7TCN59P65X','doc-tft-espi.readthedocs.io']
 
 theme:
   name: readthedocs
