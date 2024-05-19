@@ -68,6 +68,7 @@ nav:
       - tft_espi/methods/init.md
       - tft_espi/methods/readpixel.md
       - tft_espi/methods/setcursor.md
+      - tft_espi/methods/setrotation.md
       - tft_espi/methods/settextcolor.md
       - tft_espi/methods/settextdatum.md
       - tft_espi/methods/settextpadding.md
