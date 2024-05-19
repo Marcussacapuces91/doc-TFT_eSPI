@@ -19,6 +19,7 @@ Set the text size multiplier.
 None.
 
 ## Example
+
 ```cpp
 #include <TFT_eSPI.h> // Include the TFT_eSPI library
 
