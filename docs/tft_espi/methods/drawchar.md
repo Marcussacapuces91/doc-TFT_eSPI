@@ -26,7 +26,7 @@ Draw a single character in the GLCD or GFXFF font or a Unicode glyph onto the sc
 ## Result
 
 * None,
-* `int16_t`: Returns the position of the cursor (x coord.) after drawing.
+* `int16_t`: width of character in pixels.
 
 ## Example
 

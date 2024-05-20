@@ -26,7 +26,7 @@ blank old displayed strings.
 
 ## Result
 
-* `uint16_t`: x coord, after the last character drawn.
+`uint16_t`: the width of a string in pixels.
 
 ## Example
 
