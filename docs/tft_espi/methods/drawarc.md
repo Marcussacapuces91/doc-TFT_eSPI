@@ -1,5 +1,5 @@
 ---
-title: TFT_eSPI::drawArc TFT_eSPI::drawSmoothArc 
+title: TFT_eSPI::drawArc TFT_eSPI::drawSmoothArc
 ---
 
 ## Description
@@ -8,7 +8,7 @@ Draw an arc clockwise from 6 o'clock position ether anti-aliased or not.
 
 **Smooth** draws an anti-aliased arc between start and end angles. Arc ends are anti-aliased.
 
-By default the arc is drawn with square ends unless the `roundEnds` parameter is included and set true.
+By default, the arc is drawn with square ends unless the `roundEnds` parameter is included and set true.
 
 Angle = 0 is at 6 o'clock position, 90 at 9 o'clock *etc*. The angles must be in range 0-360 or they will be clipped to 
 these limits. The start angle may be larger than the end angle. Arcs are always drawn clockwise from the start angle.
