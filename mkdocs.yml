@@ -55,12 +55,14 @@ nav:
       - tft_espi/methods/drawarc.md
       - tft_espi/methods/drawbitmap.md
       - tft_espi/methods/drawcentrestring.md
+      - tft_espi/methods/drawcircle.md
       - tft_espi/methods/drawchar.md
       - tft_espi/methods/drawfastline.md
       - tft_espi/methods/drawline.md
       - tft_espi/methods/drawpixel.md
       - tft_espi/methods/drawrect.md
       - tft_espi/methods/drawstring.md
+      - tft_espi/methods/drawtriangle.md
       - tft_espi/methods/fillrect.md
       - tft_espi/methods/fillscreen.md
       - tft_espi/methods/gettextdatum.md
