@@ -11,7 +11,7 @@ build:
   tools:
     python: "3.11"
   commands:
-    - echo "google-site-verification\: google360d10608477574b.html" > $READTHEDOCS_OUTPUT/html/google360d10608477574b.html
+    - echo 'google-site-verification: google360d10608477574b.html' > $READTHEDOCS_OUTPUT/html/google360d10608477574b.html
 
 mkdocs:
   configuration: mkdocs.yml
