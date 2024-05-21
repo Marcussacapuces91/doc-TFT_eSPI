@@ -10,9 +10,9 @@ build:
   os: ubuntu-22.04
   tools:
     python: "3.11"
-  commands:
-    - mkdir -p $READTHEDOCS_OUTPUT/html/
-    - cp google360d10608477574b.html $READTHEDOCS_OUTPUT/html/
+#  commands:
+#    - mkdir -p $READTHEDOCS_OUTPUT/html/
+#    - cp google360d10608477574b.html $READTHEDOCS_OUTPUT/html/
 
 mkdocs:
   configuration: mkdocs.yml
