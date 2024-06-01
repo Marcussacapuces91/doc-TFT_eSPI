@@ -78,6 +78,7 @@ nav:
       - tft_espi/methods/settextdatum.md
       - tft_espi/methods/settextpadding.md
       - tft_espi/methods/settextsize.md
+      - tft_espi/methods/settextwrap.md
       - tft_espi/methods/setviewport.md
   - Header file TFT_eSPRITE.h:
     - Class: tft_esprite.md
