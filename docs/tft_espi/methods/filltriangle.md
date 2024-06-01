@@ -1,15 +1,15 @@
 ---
-title: TFT_eSPI::drawTriangle 
+title: TFT_eSPI::fillTriangle 
 ---
 
 ## Description
 
-Draw a triangle outline using 3 arbitrary points.
+Draw a filled triangle using 3 arbitrary points.
 
 ## Signature
 
 ```cpp
-void TFT_eSPI::drawTriangle(int32_t x0, int32_t y0, 
+void TFT_eSPI::fillTriangle(int32_t x0, int32_t y0, 
                             int32_t x1, int32_t y1, 
                             int32_t x2, int32_t y2, 
                             uint32_t color)
@@ -23,7 +23,7 @@ void TFT_eSPI::drawTriangle(int32_t x0, int32_t y0,
 * `ìnt32_t` y1: second point y coord.
 * `ìnt32_t` x2: third point x coord.
 * `ìnt32_t` y2: third point y coord.
-* `uìnt32_t` [color](../colors.md): outline color.
+* `uìnt32_t` [color](../colors.md): color.
 
 ## Result
 
@@ -47,7 +47,7 @@ void loop() {
   delay(1000);
 }
 ```
-In this example, we use `drawTriangle` to draw a triangle with the following parameters:
+In this example, we use `fillTriangle` to draw a filled triangle with the following parameters:
 
 * `x1`: 50 (the x-coordinate of the first vertex)
 * `y1`: 50 (the y-coordinate of the first vertex)
@@ -55,10 +55,10 @@ In this example, we use `drawTriangle` to draw a triangle with the following par
 * `y2`: 150 (the y-coordinate of the second vertex)
 * `x3`: 150 (the x-coordinate of the third vertex)
 * `y3`: 50 (the y-coordinate of the third vertex)
-* `color`: TFT_YELLOW (the color of the border)
+* `color`: TFT_YELLOW (the color)
 
-This will draw a triangle with a yellow border, with vertices at (50, 50), (100, 150), and (150, 50).
+This will draw a filled triangle with a yellow color, with vertices at (50, 50), (100, 150), and (150, 50).
 
 !!! Note 
-    The `drawTriangle` method only draws the outline of the triangle, and does not fill it with a color. If you
-    want to fill the triangle with a color, you can use the [`fillTriangle`](filltriangle.md) method instead.
+    The `fillTriangle` method fills the surface of the triangle with a color. If you want to drw the outline of a
+    triangle with a color, you can use the [`drawTriangle`](drawtriangle.md) method instead.
