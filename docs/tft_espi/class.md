@@ -31,7 +31,7 @@ title: Class TFT_eSPI
 * [`void drawChar(int32_t x, int32_t y, uint16_t c, uint32_t color, uint32_t bg, uint8_t size)`](methods/drawchar.md)
 * [`int16_t drawChar(uint16_t uniCode, int32_t x, int32_t y)`](methods/drawchar.md)
 * [`int16_t drawChar(uint16_t uniCode, int32_t x, int32_t y, uint8_t font)`](methods/drawchar.md)
-* `void drawCircle(int32_t x, int32_t y, int32_t r, uint32_t color)`
+* [`void drawCircle(int32_t x, int32_t y, int32_t r, uint32_t color)`](methods/drawcircle.md)
 * `void drawCircleHelper(int32_t x, int32_t y, int32_t r, uint8_t cornername, uint32_t color)`
 * `void drawEllipse(int16_t x, int16_t y, int32_t rx, int32_t ry, uint16_t color)`
 * [`void drawFastVLine(int32_t x, int32_t y, int32_t h, uint32_t color)`](methods/drawfastline.md)
@@ -43,13 +43,13 @@ title: Class TFT_eSPI
 * `int16_t drawNumber(long intNumber, int32_t x, int32_t y)`
 * [`void drawPixel(int32_t x, int32_t y, uint32_t color)`](methods/drawpixel.md)
 * [`uint16_t drawPixel(int32_t x, int32_t y, uint32_t color, uint8_t alpha, uint32_t bg_color = 0x00FFFFFF)`](methods/drawpixel.md)
-* `void drawRect(int32_t x, int32_t y, int32_t w, int32_t h, uint32_t color)`
+* [`void drawRect(int32_t x, int32_t y, int32_t w, int32_t h, uint32_t color)`](methods/drawrect.md)
 * `int16_t drawRightString(const char *string, int32_t x, int32_t y, uint8_t font)`
 * `int16_t drawRightString(const String& string, int32_t x, int32_t y, uint8_t font)`
-* `void drawRoundRect(int32_t x, int32_t y, int32_t w, int32_t h, int32_t radius, uint32_t color)`
+* [`void drawRoundRect(int32_t x, int32_t y, int32_t w, int32_t h, int32_t radius, uint32_t color)`](methods/drawrect.md)
 * [`void drawSmoothArc(int32_t x, int32_t y, int32_t r, int32_t ir, uint32_t startAngle, uint32_t endAngle, uint32_t fg_color, uint32_t bg_color, bool roundEnds = false)`](methods/drawarc.md)
-* `void drawSmoothCircle(int32_t x, int32_t y, int32_t r, uint32_t fg_color, uint32_t bg_color)`
-* `void drawSmoothRoundRect(int32_t x, int32_t y, int32_t r, int32_t ir, int32_t w, int32_t h, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF, uint8_t quadrants = 0xF)`
+* [`void drawSmoothCircle(int32_t x, int32_t y, int32_t r, uint32_t fg_color, uint32_t bg_color)`](methods/drawcircle.md)
+* [`void drawSmoothRoundRect(int32_t x, int32_t y, int32_t r, int32_t ir, int32_t w, int32_t h, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF, uint8_t quadrants = 0xF)`
 * `void drawSpot(float ax, float ay, float r, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF)`
 * `int16_t drawString(const char *string, int32_t x, int32_t y, uint8_t font)`
 * `int16_t drawString(const char *string, int32_t x, int32_t y)`

@@ -171,4 +171,5 @@ typedef uint16_t (*getColorCallback)(uint16_t x, uint16_t y);
 
 ## Class TFT_eSPI
 
-[`Class TFT_eSPI`](class.md)
+* [`Class TFT_eSPI`](class.md)
+* [`Class TFT_eSPI_Button`](../tft_espi_button/class.md) (included by `#include`)

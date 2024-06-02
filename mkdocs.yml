@@ -48,7 +48,9 @@ nav:
     - 'File content': tft_espi/index.md
     - Colors: tft_espi/colors.md
     - Datums: tft_espi/datums.md
-    - Class: tft_espi/class.md
+    - Classes:
+      - tft_espi/class.md
+      - tft_espi_button/class.md
     - Public methods:
       - tft_espi/methods/constructor.md
       - tft_espi/methods/begin.md
@@ -81,7 +83,11 @@ nav:
       - tft_espi/methods/settextsize.md
       - tft_espi/methods/settextwrap.md
       - tft_espi/methods/setviewport.md
-  - Header file TFT_eSPRITE.h:
+  - 'Header file TFT_eSPI_Button.h':
+    - Class: tft_espi_button/class.md
+    - Public methods:
+        - tft_espi_button/constructor.md
+  - 'Header file TFT_eSPRITE.h':
     - Class: tft_esprite.md
 
 # Only mkdocs >= 1.6
@@ -89,3 +95,4 @@ exclude_docs: |
   getsettextdatum.md
   getsettextpadding.md
   helloword.md
+  button.md

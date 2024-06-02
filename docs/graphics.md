@@ -79,6 +79,11 @@ TFT_eSPI provides a range of functions for creating UI elements, such as buttons
 components. These UI elements are provided in the [TFT_eWidget]() class, available in another library. These
 include:
 
+!!! warning
+    TODO
+
+<!--
+
 * [`drawButton()`](): Draws a button with specified text and location.
 * [`drawSlider()`](): Draws a slider with specified location and range.
 * [`drawCheckbox()`](): Draws a checkbox with specified location and state.
@@ -89,3 +94,4 @@ These functions allow you to create complex user interfaces, from simple buttons
 
 By combining these functions, you can create a wide range of graphics and UI elements, from simple icons and text to
 complex user interfaces and interactive components. With TFT_eSPI, the possibilities are endless!
+-->
