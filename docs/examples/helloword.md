@@ -1,4 +1,4 @@
-```
+```c++
 #include <TFT_eSPI.h>
 
 TFT_eSPI tft = TFT_eSPI();
@@ -10,6 +10,7 @@ void setup() {
   tft.setCursor(0, 0);
   tft.setTextColor(TFT_WHITE);
   tft.setTextSize(2);
+  tft.setTextFont(2); // Set the text font to font number 2
   tft.println("Hello World!");
 }
 
@@ -27,6 +28,7 @@ Let me explain what each line does:
 * `tft.setCursor(0, 0);` sets the cursor position to the top-left corner of the screen.
 * `tft.setTextColor(TFT_WHITE);` sets the text color to white.
 * `tft.setTextSize(2);` sets the text size to 2, which means the text will be displayed in a medium size.
+* `tft.setTextFont(2);` sets the text font to font number 2, which determines the style and appearance of the text.
 * `tft.println("Hello World!");` prints the "Hello World!" message to the screen.
 
 !!! Note
