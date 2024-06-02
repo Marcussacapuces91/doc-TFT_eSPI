@@ -73,6 +73,7 @@ nav:
       - tft_espi/methods/gettextpadding.md
       - tft_espi/methods/height_width.md
       - tft_espi/methods/init.md
+      - tft_espi/methods/print.md
       - tft_espi/methods/readpixel.md
       - tft_espi/methods/setcursor.md
       - tft_espi/methods/setrotation.md
