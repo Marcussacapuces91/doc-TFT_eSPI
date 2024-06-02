@@ -76,6 +76,7 @@ nav:
       - tft_espi/methods/setrotation.md
       - tft_espi/methods/settextcolor.md
       - tft_espi/methods/settextdatum.md
+      - tft_espi/methods/settextfont.md
       - tft_espi/methods/settextpadding.md
       - tft_espi/methods/settextsize.md
       - tft_espi/methods/settextwrap.md
