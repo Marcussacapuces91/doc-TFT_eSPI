@@ -88,6 +88,7 @@ nav:
     - Class: tft_espi_button/class.md
     - Public methods:
         - tft_espi_button/constructor.md
+        - tft_espi_button/initbutton.md
   - 'Header file TFT_eSPRITE.h':
     - Class: tft_esprite.md
 

@@ -13,7 +13,7 @@ That is, the `TFT_eSPI_Button` is available by default for your programs.
 
 ### Inits
 
-Then *classic* `initButton()` uses centre & size, whereas the `initButtonUL()` uses upper-left corner & size:
+The *classic* `initButton()` uses centre & size, whereas the `initButtonUL()` uses upper-left corner & size:
 
 * `void initButton(TFT_eSPI *gfx, int16_t x, int16_t y, uint16_t w, uint16_t h, uint16_t outline, uint16_t fill, uint16_t textcolor, char *label, uint8_t textsize)`
 * `void initButtonUL(TFT_eSPI *gfx, int16_t x1, int16_t y1, uint16_t w, uint16_t h, uint16_t outline, uint16_t fill, uint16_t textcolor, char *label, uint8_t textsize)`
