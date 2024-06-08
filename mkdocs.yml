@@ -97,7 +97,7 @@ nav:
 
 # Only mkdocs >= 1.6
 exclude_docs: |
-  getsettextdatum.md
-  getsettextpadding.md
-  helloword.md
-  button.md
+  examples/getsettextdatum.md
+  examples/getsettextpadding.md
+  examples/helloword.md
+  examples/button.md
