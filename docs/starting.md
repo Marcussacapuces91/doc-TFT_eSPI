@@ -2,8 +2,6 @@
 title: Getting Started
 ---
 
-
-
 ## Introduction to TFT_eSPI
 
 *Mainy sourced from: [TFT_eSPI/README](https://github.com/Bodmer/TFT_eSPI/blob/master/README.md)*
@@ -60,34 +58,42 @@ a very good performance with the generic Arduino SPI functions.
 line is sometimes labelled `DC`, `RS` or `A0`.
 
 Due to lack of GPIO pins the 8-bit parallel interface is **not** supported on the ESP8266. 8-bit parallel interface TFTs
-(e.g. UNO format mcufriend shields) can used with the STM32Fxxx Nucleo 64/144 range or the UNO format ESP32 (see below
-for ESP32).
+(e.g. UNO format mcufriend shields) can be used with the STM32Fxxx Nucleo 64/144 range or the UNO format ESP32 (see
+below for ESP32).
 
 Support for the XPT2046 touch screen controller is built into the library and can be used with SPI interface displays.
 Third party touch support libraries are also available when using a display parallel interface.
 
 Displays using the following controllers are supported:
 
-* GC9A01
-* ILI9163
-* ILI9225
-* ILI9341
-* ILI9342
-* ILI9481 (DMA not supported with SPI)
-* ILI9486 (DMA not supported with SPI)
-* ILI9488 (DMA not supported with SPI)
-* HX8357B (16-bit parallel tested with RP2040)
-* HX8357C (16-bit parallel tested with RP2040)
-* HX8357D
-* R61581
-* RM68120 (support files added but untested)
-* RM68140
-* S6D02A1
-* SSD1351
-* SSD1963 (this controller only has a parallel interface option)
-* ST7735
-* ST7789
-* ST7796
+* GalaxyCore
+    * GC9A01 (240x240 65K RGB)
+* ILI Technology Corp. (Ilitek)
+    * ILI9163
+    * ILI9225
+    * [ILI9341](hardware/ili9341.md)
+    * ILI9342
+    * ILI9481 (DMA not supported with SPI)
+    * ILI9486 (DMA not supported with SPI)
+    * ILI9488 (DMA not supported with SPI)
+* Himax
+    * HX8357B (320RGBx480 dots, 262K color)
+    * HX8357C (16-bit parallel tested with RP2040)
+    * HX8357D
+* RenesasSP
+    * [R61581](hardware/r61581.md)
+* Raydium
+    * [RM68120](hardware/rm68120.md) (support files added but untested)
+    * RM68140
+* Samsung
+    * S6D02A1
+* Solomon Systech
+    * SSD1351
+    * SSD1963 (this controller only has a parallel interface option)
+* Sitronix
+    * ST7735
+    * ST7789
+    * ST7796
  
 ILI9341 and ST7796 SPI based displays are recommended as starting point for experimenting with this library.
 
@@ -106,9 +112,10 @@ Installing the TFT_eSPI library is a straightforward process.
 You can install the library using the Library Manager:
 ![Install TFT_eSPI](img/select-TFT_eSPI-arduino.png)
 
-Then you have to select your hardware configuration, either by setting the right "SetupXX" config file, either by
-setting all the right parameters in the `User_Setup.h` file. Both files are located in 
-`C:\Users\__user__\Documents\Arduino\libraries\TFT_eSPI\` for my Windows 10 PC.
+!!! Important
+    Then you have to select your hardware configuration, either by setting the right "SetupXX" config file, either by
+    setting all the right parameters in the `User_Setup.h` file. Both files are located in 
+    `C:\Users\__user__\Documents\Arduino\libraries\TFT_eSPI\` for my Windows 10 PC.
 
 !!! Warning
     An update of the TFT_eSPI library's version might replace all your local modifications by installing new files. 
