@@ -19,8 +19,8 @@ void setup(void) {
 ```
 **functions used**:
 
-* [TFT_eSPI::begin()](tft_espi/methods/begin.md);
-* [TFT_eSPI::setRotation()](tft_espi/methods/setrotation.md).
+* [`TFT_eSPI::begin()`](tft_espi/methods/begin.md);
+* [`TFT_eSPI::setRotation()`](tft_espi/methods/setrotation.md).
 
 Now you are ready to use your screen.
 
@@ -42,10 +42,10 @@ void loop() {
 ```
 **functions used**:
 
-* [TFT_eSPI::setTextSize()](tft_espi/methods/settextsize.md);
-* [TFT_eSPI::fillScreen()](tft_espi/methods/fillscreen.md);
-* [TFT_eSPI::setTextColor()](tft_espi/methods/settextcolor.md);
-* [TFT_eSPI::drawString()](tft_espi/methods/drawstring.md).
+* [`TFT_eSPI::setTextSize()`](tft_espi/methods/settextsize.md);
+* [`TFT_eSPI::fillScreen()`](tft_espi/methods/fillscreen.md);
+* [`TFT_eSPI::setTextColor()`](tft_espi/methods/settextcolor.md);
+* [`TFT_eSPI::drawString()`](tft_espi/methods/drawstring.md).
 
 Has been herited from `Print`, you can also use all versions of `print()` function:
 
@@ -64,7 +64,7 @@ void loop() {
 
 **functions used**: 
 
-* [TFT_eSPI::setTextSize()](tft_espi/methods/settextsize.md);
-* [TFT_eSPI::fillScreen()](tft_espi/methods/fillscreen.md);
-* [TFT_eSPI::setTextColor()](tft_espi/methods/settextcolor.md);
-* [TFT_eSPI::setCursor()](tft_espi/methods/setcursor.md).
+* [`TFT_eSPI::setTextSize()`](tft_espi/methods/settextsize.md);
+* [`TFT_eSPI::fillScreen()`](tft_espi/methods/fillscreen.md);
+* [`TFT_eSPI::setTextColor()`](tft_espi/methods/settextcolor.md);
+* [`TFT_eSPI::setCursor()`](tft_espi/methods/setcursor.md).
