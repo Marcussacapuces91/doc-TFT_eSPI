@@ -11,5 +11,9 @@ I'm starting a detailed documentation of this library, which I found lacking for
 I hope this documentation helps you in developing with the TFT_eSPI library. Please don't hesitate to provide feedback
 on what works and what doesn't, so we can improve this documentation together.
 
-!!! note
-    This project is under active development.
+!!! Warning
+
+    This project is under active development. Your help is desperately needed!
+
+    * Fork me on [github.com/Marcussacapuces91/doc-TFT_eSPI](https://github.com/Marcussacapuces91/doc-TFT_eSPI)
+    * Support on [Tipeee.com](https://fr.tipeee.com/marcussacapuces91)
