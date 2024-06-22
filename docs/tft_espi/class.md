@@ -32,15 +32,15 @@ title: Class TFT_eSPI
 * [`int16_t drawChar(uint16_t uniCode, int32_t x, int32_t y)`](methods/drawchar.md)
 * [`int16_t drawChar(uint16_t uniCode, int32_t x, int32_t y, uint8_t font)`](methods/drawchar.md)
 * [`void drawCircle(int32_t x, int32_t y, int32_t r, uint32_t color)`](methods/drawcircle.md)
-<!-- * `void drawCircleHelper(int32_t x, int32_t y, int32_t r, uint8_t cornername, uint32_t color)` -->
+* `void drawCircleHelper(int32_t x, int32_t y, int32_t r, uint8_t cornername, uint32_t color)`
 * [`void drawEllipse(int16_t x, int16_t y, int32_t rx, int32_t ry, uint16_t color)`](methods/drawellipse.md)
 * [`void drawFastVLine(int32_t x, int32_t y, int32_t h, uint32_t color)`](methods/drawfastline.md)
 * [`void drawFastHLine(int32_t x, int32_t y, int32_t w, uint32_t color)`](methods/drawfastline.md)
 * [`int16_t drawFloat(float floatNumber, uint8_t decimal, int32_t x, int32_t y, uint8_t font)`](methods/drawfloat.md)
 * [`int16_t drawFloat(float floatNumber, uint8_t decimal, int32_t x, int32_t y)`](methods/drawfloat.md)
 * [`void drawLine(int32_t xs, int32_t ys, int32_t xe, int32_t ye, uint32_t color)`](methods/drawline.md)
-* `int16_t drawNumber(long intNumber, int32_t x, int32_t y, uint8_t font)`
-* `int16_t drawNumber(long intNumber, int32_t x, int32_t y)`
+* [`int16_t drawNumber(long intNumber, int32_t x, int32_t y, uint8_t font)`](methods/drawnumber.md)
+* [`int16_t drawNumber(long intNumber, int32_t x, int32_t y)`](methods/drawnumber.md)
 * [`void drawPixel(int32_t x, int32_t y, uint32_t color)`](methods/drawpixel.md)
 * [`uint16_t drawPixel(int32_t x, int32_t y, uint32_t color, uint8_t alpha, uint32_t bg_color = 0x00FFFFFF)`](methods/drawpixel.md)
 * [`void drawRect(int32_t x, int32_t y, int32_t w, int32_t h, uint32_t color)`](methods/drawrect.md)

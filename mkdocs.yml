@@ -68,6 +68,7 @@ nav:
       - tft_espi/methods/drawfastline.md
       - tft_espi/methods/drawfloat.md
       - tft_espi/methods/drawline.md
+      - tft_espi/methods/drawnumber.md
       - tft_espi/methods/drawpixel.md
       - tft_espi/methods/drawrect.md
       - tft_espi/methods/drawstring.md
