@@ -42,9 +42,13 @@ nav:
   - 'Getting Started': starting.md
   - 'Display Fundamentals': fundamentals.md
   - 'Graphics and UI': graphics.md
-  - 'Touch and Input': inputs.md
-  - 'Advanced Topics': advanced.md
+#  - 'Touch and Input': inputs.md
+#  - 'Advanced Topics': advanced.md
   - 'Examples and Resources': examples.md
+  - 'Hardwares':
+      - hardware/ili9341.md
+      - hardware/r61581.md
+      - hardware/rm68120.md
   - 'Header file TFT_eSPI.h':
     - 'File content': tft_espi/index.md
     - Colors: tft_espi/colors.md
@@ -104,3 +108,6 @@ exclude_docs: |
   examples/getsettextpadding.md
   examples/helloword.md
   examples/button.md
+  inputs.md
+  advanced.md
+  
