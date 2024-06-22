@@ -32,12 +32,12 @@ title: Class TFT_eSPI
 * [`int16_t drawChar(uint16_t uniCode, int32_t x, int32_t y)`](methods/drawchar.md)
 * [`int16_t drawChar(uint16_t uniCode, int32_t x, int32_t y, uint8_t font)`](methods/drawchar.md)
 * [`void drawCircle(int32_t x, int32_t y, int32_t r, uint32_t color)`](methods/drawcircle.md)
-* `void drawCircleHelper(int32_t x, int32_t y, int32_t r, uint8_t cornername, uint32_t color)`
-* `void drawEllipse(int16_t x, int16_t y, int32_t rx, int32_t ry, uint16_t color)`
+<!-- * `void drawCircleHelper(int32_t x, int32_t y, int32_t r, uint8_t cornername, uint32_t color)` -->
+* [`void drawEllipse(int16_t x, int16_t y, int32_t rx, int32_t ry, uint16_t color)`](methods/drawellipse.md)
 * [`void drawFastVLine(int32_t x, int32_t y, int32_t h, uint32_t color)`](methods/drawfastline.md)
 * [`void drawFastHLine(int32_t x, int32_t y, int32_t w, uint32_t color)`](methods/drawfastline.md)
-* `int16_t drawFloat(float floatNumber, uint8_t decimal, int32_t x, int32_t y, uint8_t font)`
-* `int16_t drawFloat(float floatNumber, uint8_t decimal, int32_t x, int32_t y)`
+* [`int16_t drawFloat(float floatNumber, uint8_t decimal, int32_t x, int32_t y, uint8_t font)`](methods/drawfloat.md)
+* [`int16_t drawFloat(float floatNumber, uint8_t decimal, int32_t x, int32_t y)`](methods/drawfloat.md)
 * [`void drawLine(int32_t xs, int32_t ys, int32_t xe, int32_t ye, uint32_t color)`](methods/drawline.md)
 * `int16_t drawNumber(long intNumber, int32_t x, int32_t y, uint8_t font)`
 * `int16_t drawNumber(long intNumber, int32_t x, int32_t y)`
@@ -49,13 +49,13 @@ title: Class TFT_eSPI
 * [`void drawRoundRect(int32_t x, int32_t y, int32_t w, int32_t h, int32_t radius, uint32_t color)`](methods/drawrect.md)
 * [`void drawSmoothArc(int32_t x, int32_t y, int32_t r, int32_t ir, uint32_t startAngle, uint32_t endAngle, uint32_t fg_color, uint32_t bg_color, bool roundEnds = false)`](methods/drawarc.md)
 * [`void drawSmoothCircle(int32_t x, int32_t y, int32_t r, uint32_t fg_color, uint32_t bg_color)`](methods/drawcircle.md)
-* [`void drawSmoothRoundRect(int32_t x, int32_t y, int32_t r, int32_t ir, int32_t w, int32_t h, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF, uint8_t quadrants = 0xF)`
+* `void drawSmoothRoundRect(int32_t x, int32_t y, int32_t r, int32_t ir, int32_t w, int32_t h, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF, uint8_t quadrants = 0xF)`
 * `void drawSpot(float ax, float ay, float r, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF)`
-* `int16_t drawString(const char *string, int32_t x, int32_t y, uint8_t font)`
-* `int16_t drawString(const char *string, int32_t x, int32_t y)`
-* `int16_t drawString(const String& string, int32_t x, int32_t y, uint8_t font)`
-* `int16_t drawString(const String& string, int32_t x, int32_t y)`
-* `void drawTriangle(int32_t x1,int32_t y1, int32_t x2,int32_t y2, int32_t x3,int32_t y3, uint32_t color)`
+* [`int16_t drawString(const char *string, int32_t x, int32_t y, uint8_t font)`](methods/drawstring.md)
+* [`int16_t drawString(const char *string, int32_t x, int32_t y)`](methods/drawstring.md)
+* [`int16_t drawString(const String& string, int32_t x, int32_t y, uint8_t font)`](methods/drawstring.md)
+* [`int16_t drawString(const String& string, int32_t x, int32_t y)`](methods/drawstring.md)
+* [`void drawTriangle(int32_t x1,int32_t y1, int32_t x2,int32_t y2, int32_t x3,int32_t y3, uint32_t color)`](methods/drawtriangle.md)
 * `void drawWedgeLine(float ax, float ay, float bx, float by, float aw, float bw, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF)`
 * `void drawWideLine(float ax, float ay, float bx, float by, float wd, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF)`
 * `void drawXBitmap(int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t fgcolor)`
@@ -63,9 +63,9 @@ title: Class TFT_eSPI
 
 ### Fill anything
  
-* `void fillCircle(int32_t x, int32_t y, int32_t r, uint32_t color)`
+* [`void fillCircle(int32_t x, int32_t y, int32_t r, uint32_t color)`](methods/fillcircle.md)
 * `void fillCircleHelper(int32_t x, int32_t y, int32_t r, uint8_t cornername, int32_t delta, uint32_t color)`
-* `void fillEllipse(int16_t x, int16_t y, int32_t rx, int32_t ry, uint16_t color)`
+* [`void fillEllipse(int16_t x, int16_t y, int32_t rx, int32_t ry, uint16_t color)`](methods/fillellipse.md)
 * [`void fillRect(int32_t x, int32_t y, int32_t w, int32_t h, uint32_t color)`](methods/fillrect.md)
 * `void fillRectVGradient(int16_t x, int16_t y, int16_t w, int16_t h, uint32_t color1, uint32_t color2)`
 * `void fillRectHGradient(int16_t x, int16_t y, int16_t w, int16_t h, uint32_t color1, uint32_t color2)`
@@ -73,7 +73,7 @@ title: Class TFT_eSPI
 * `void fillSmoothCircle(int32_t x, int32_t y, int32_t r, uint32_t color, uint32_t bg_color = 0x00FFFFFF)`
 * `void fillSmoothRoundRect(int32_t x, int32_t y, int32_t w, int32_t h, int32_t radius, uint32_t color, uint32_t bg_color = 0x00FFFFFF)`
 * [`void fillScreen(uint32_t color)`](methods/fillscreen.md)
-* `void fillTriangle(int32_t x1,int32_t y1, int32_t x2,int32_t y2, int32_t x3,int32_t y3, uint32_t color)`
+* [`void fillTriangle(int32_t x1,int32_t y1, int32_t x2,int32_t y2, int32_t x3,int32_t y3, uint32_t color)`](methods/filltriangle.md)
 
 ### Get screen height/width
 
