@@ -44,8 +44,8 @@ title: Class TFT_eSPI
 * [`void drawPixel(int32_t x, int32_t y, uint32_t color)`](methods/drawpixel.md)
 * [`uint16_t drawPixel(int32_t x, int32_t y, uint32_t color, uint8_t alpha, uint32_t bg_color = 0x00FFFFFF)`](methods/drawpixel.md)
 * [`void drawRect(int32_t x, int32_t y, int32_t w, int32_t h, uint32_t color)`](methods/drawrect.md)
-* `int16_t drawRightString(const char *string, int32_t x, int32_t y, uint8_t font)`
-* `int16_t drawRightString(const String& string, int32_t x, int32_t y, uint8_t font)`
+* [`int16_t drawRightString(const char *string, int32_t x, int32_t y, uint8_t font)`](methods/drawrightstring.md)
+* [`int16_t drawRightString(const String& string, int32_t x, int32_t y, uint8_t font)`](methods/drawrightstring.md)
 * [`void drawRoundRect(int32_t x, int32_t y, int32_t w, int32_t h, int32_t radius, uint32_t color)`](methods/drawrect.md)
 * [`void drawSmoothArc(int32_t x, int32_t y, int32_t r, int32_t ir, uint32_t startAngle, uint32_t endAngle, uint32_t fg_color, uint32_t bg_color, bool roundEnds = false)`](methods/drawarc.md)
 * [`void drawSmoothCircle(int32_t x, int32_t y, int32_t r, uint32_t fg_color, uint32_t bg_color)`](methods/drawcircle.md)
