@@ -25,7 +25,7 @@ Draw string right justified do dX.
 
 ## Result
 
-int16_t: displayed string x size.
+`int16_t`: displayed string x size.
 
 ## Example
 
