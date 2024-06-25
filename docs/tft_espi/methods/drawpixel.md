@@ -6,7 +6,7 @@ title: TFT_eSPI::drawPixel
 
 Push a single pixel at an arbitrary position or draw a pixel blended with the screen or bg pixel colour.
 
-If the bg_color is not specified, the background pixel colour will be read from TFT or sprite.
+If the `bg_color` is not specified, the background pixel colour will be read from TFT or sprite.
 
 ## Signature
 

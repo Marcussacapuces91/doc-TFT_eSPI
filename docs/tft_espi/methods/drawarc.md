@@ -16,7 +16,7 @@ these limits. The start angle may be larger than the end angle. Arcs are always 
 **Not smooth** is as per `drawSmoothArc` except the ends of the arc are **not** anti-aliased, this facilitates dynamic 
 arc length changes with arc segments and ensures clean segment joints.
 
-The sides of the arc are anti-aliased by default. If smoothArc is false sides will **not** be anti-aliased.
+The sides of the arc are anti-aliased by default. If `smoothArc` is false sides will **not** be anti-aliased.
 
 ## Signature
 

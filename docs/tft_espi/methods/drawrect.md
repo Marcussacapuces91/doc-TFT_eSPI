@@ -1,15 +1,18 @@
 ---
-title: TFT_eSPI::drawRect TFT_eSPI::drawRoundRect
+title: TFT_eSPI::drawRect, TFT_eSPI::drawRoundRect & TFT_eSPI::drawSmoothRoundRect
 ---
 
 ## Description
 
-Draw a rectangle outline or a rounded corner rectangle outline.
+Draw a rectangle outline or a rounded corner rectangle outline or an anti-aliased & rounded rectangle.
 
 ## Signature
 
 * `void TFT_eSPI::drawRect(int32_t x, int32_t y, int32_t w, int32_t h, uint32_t color)`
 * `void TFT_eSPI::drawRoundRect(int32_t x, int32_t y, int32_t w, int32_t h, int32_t r, uint32_t color)`
+* `void TFT_eSPI::drawSmoothRoundRect(int32_t x, int32_t y, int32_t r, int32_t ir, int32_t w, int32_t h,
+    uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF, uint8_t quadrants = 0xF)`
+
 
 ## Parameters
 
@@ -19,6 +22,11 @@ Draw a rectangle outline or a rounded corner rectangle outline.
 * `ìnt32_t` y1: y coord to.
 * `int32_t` r: rounded radius.
 * `uìnt32_t` [color](../colors.md): line color.
+* `int32_t` ir: inner corne radius.
+* `uìnt32_t` [fg_color](../colors.md): line color.
+* `uìnt32_t` [bg_color](../colors.md): background color (default to 0x00FFFFFF); If bg_color is not included the background pixel
+    colour will be read from TFT or sprite.
+* `uint8_t` quadrants: default to 0xF; ?? What is that for ??
 
 ## Result
 
@@ -83,7 +91,7 @@ In this example, we use `drawRoundRect` to draw a rounded rectangle with the fol
 * `color`: TFT_BLUE (the color of the border)
 * `fillColor`: TFT_GREEN (the color of the fill)
 
-!!!Note
+!!! note
 
     The `radius` parameter in `drawRoundRect` specifies the radius of the rounded corners. A larger radius will result
     in more rounded corners, while a smaller radius will result in sharper corners.

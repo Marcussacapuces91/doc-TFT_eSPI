@@ -1,21 +1,24 @@
 ---
-title: TFT_eSPI::fillCircle 
+title: TFT_eSPI::fillCircle & TFT_eSPI::fillSmoothCircle
 ---
 
 ## Description
 
-Draw a filled circle.
+Draw a filled circle or an anti-aliased filled circle.
 
 ## Signature
 
-`void TFT_eSPI::fillCircle(int32_t x0, int32_t y0, int32_t r, uint32_t color)`
+`void TFT_eSPI::fillCircle(int32_t x, int32_t y, int32_t r, uint32_t color)`
+`void TFT_eSPI::fillCircle(int32_t x, int32_t y, int32_t r, uint32_t color, uint32_t bg_color = 0x00FFFFFF)`
 
 ## Parameters
 
-* `ìnt32_t` x0: center x coord.
-* `ìnt32_t` y0: center y coord.
+* `ìnt32_t` x: center x coord.
+* `ìnt32_t` y: center y coord.
 * `ìnt32_t` r: circle radius.
 * `uìnt32_t` [color](../colors.md): filling color.
+* `uìnt32_t` [bg_color](../colors.md): background color; If bg_color is not included the background pixel colour will be read
+    from TFT or sprite.
 
 ## Result
 
@@ -49,4 +52,5 @@ In this example, we use `fillCircle` to draw a filled circle with the following 
 
 This will draw a circle with a border color, centered at (120, 120) with a radius of 50 pixels.
 
-If you want to draw the circle with a border color, you can use the [`drawCircle`](drawcircle.md) method instead.
+If you want to draw the circle with a border color, you can use the [`drawCircle`](drawcircle.md) or the
+[`drawSmoothCircle`](drawcircle.md) methods instead.

@@ -1,10 +1,10 @@
 ---
-title: TFT_eSPI::height/width 
+title: TFT_eSPI::height & TFT_eSPI::width
 ---
 
 ## Description
 
-Return the pixel height and width of display (per current rotation).
+Return the pixel height or width of display (per current rotation).
 
 ## Signature
 
