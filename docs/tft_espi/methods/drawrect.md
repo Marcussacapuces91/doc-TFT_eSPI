@@ -16,10 +16,10 @@ Draw a rectangle outline or a rounded corner rectangle outline or an anti-aliase
 
 ## Parameters
 
-* `ìnt32_t` x0: x coord from.
-* `ìnt32_t` y0: y coord from.
-* `ìnt32_t` x1: x coord to.
-* `ìnt32_t` y1: y coord to.
+* `ìnt32_t` x: x coord from.
+* `ìnt32_t` y: y coord from.
+* `ìnt32_t` w: rectangle width.
+* `ìnt32_t` h: rectangle height.
 * `int32_t` r: rounded radius.
 * `uìnt32_t` [color](../colors.md): line color.
 * `int32_t` ir: inner corne radius.
