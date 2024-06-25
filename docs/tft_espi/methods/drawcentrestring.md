@@ -2,7 +2,8 @@
 title: TFT_eSPI::drawCentreString 
 ---
 
-!!! Warning "Deprecated"
+!!! warning "Deprecated"
+
     Use [`setTextDatum()`](settextdatum.md)
 
 ## Description
