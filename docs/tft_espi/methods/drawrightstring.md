@@ -4,9 +4,9 @@ title: TFT_eSPI::drawRightString
 
 ## Description
 
-!!! warning
+!!! warning "Deprecated"
 
-    Deprecated ! Use setTextDatum() instead.
+    Use [`setTextDatum()`](settextdatum.md) instead.
 
 Draw string right justified do dX.
 

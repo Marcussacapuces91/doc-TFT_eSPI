@@ -4,7 +4,7 @@ title: TFT_eSPI::drawCentreString
 
 !!! warning "Deprecated"
 
-    Use [`setTextDatum()`](settextdatum.md)
+    Use [`setTextDatum()`](settextdatum.md) instead.
 
 ## Description
 
