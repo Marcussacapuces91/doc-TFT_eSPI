@@ -24,8 +24,8 @@ Draw a rectangle outline or a rounded corner rectangle outline or an anti-aliase
 * `uìnt32_t` [color](../colors.md): line color.
 * `int32_t` ir: inner corne radius.
 * `uìnt32_t` [fg_color](../colors.md): line color.
-* `uìnt32_t` [bg_color](../colors.md): background color (default to 0x00FFFFFF); If bg_color is not included the background pixel
-    colour will be read from TFT or sprite.
+* `uìnt32_t` [bg_color](../colors.md): background color (default to 0x00FFFFFF); If `bg_color` is not included the background
+    pixel colour will be read from TFT or sprite.
 * `uint8_t` quadrants: default to 0xF; ?? What is that for ??
 
 ## Result
