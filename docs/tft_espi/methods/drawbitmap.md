@@ -1,15 +1,17 @@
 ---
-title: TFT_eSPI::drawBitmap 
+title: TFT_eSPI::drawBitmap & TFT_eSPI::drawXBitmap
 ---
 
 ## Description
 
-Draw an image stored in an array on the TFT.
+Draw an image stored in an array on the TFT or stored in an XBM array.
 
 ## Signature
 
 * `void TFT_eSPI::drawBitmap(int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t color)`
 * `void TFT_eSPI::drawBitmap(int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t fgcolor, uint16_t bgcolor)`
+* `void TFT_eSPI::drawXBitmap(int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t color)`
+* `void TFT_eSPI::drawXBitmap(int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t color, uint16_t bgcolor)`
 
 ## Parameters
 
@@ -59,5 +61,6 @@ In this example, `drawBitmap` is called with the following arguments:
 The `drawBitmap` function will draw the bitmap at the specified position on the screen using the specified color.
 
 !!!Note
+
     The `drawBitmap` function is used to draw a bitmap that is stored in an array of bytes, where each pixel is
     represented by 1 bit.

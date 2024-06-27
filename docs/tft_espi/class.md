@@ -50,16 +50,19 @@ title: Class TFT_eSPI
 * [`void drawSmoothArc(int32_t x, int32_t y, int32_t r, int32_t ir, uint32_t startAngle, uint32_t endAngle, uint32_t fg_color, uint32_t bg_color, bool roundEnds = false)`](methods/drawarc.md)
 * [`void drawSmoothCircle(int32_t x, int32_t y, int32_t r, uint32_t fg_color, uint32_t bg_color)`](methods/drawcircle.md)
 * [`void drawSmoothRoundRect(int32_t x, int32_t y, int32_t r, int32_t ir, int32_t w, int32_t h, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF, uint8_t quadrants = 0xF)`](methods/drawrect.md)
-* `void drawSpot(float ax, float ay, float r, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF)`
 * [`int16_t drawString(const char *string, int32_t x, int32_t y, uint8_t font)`](methods/drawstring.md)
 * [`int16_t drawString(const char *string, int32_t x, int32_t y)`](methods/drawstring.md)
 * [`int16_t drawString(const String& string, int32_t x, int32_t y, uint8_t font)`](methods/drawstring.md)
 * [`int16_t drawString(const String& string, int32_t x, int32_t y)`](methods/drawstring.md)
 * [`void drawTriangle(int32_t x1,int32_t y1, int32_t x2,int32_t y2, int32_t x3,int32_t y3, uint32_t color)`](methods/drawtriangle.md)
+* [`void drawXBitmap(int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t fgcolor)`](methods/drawbitmap.md)
+* [`void drawXBitmap(int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t fgcolor, uint16_t bgcolor)`](methods/drawbitmap.md)
+
+### Draw anti-aliased helpers
+
+* `void drawSpot(float ax, float ay, float r, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF)`
 * `void drawWedgeLine(float ax, float ay, float bx, float by, float aw, float bw, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF)`
 * `void drawWideLine(float ax, float ay, float bx, float by, float wd, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF)`
-* `void drawXBitmap(int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t fgcolor)`
-* `void drawXBitmap(int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t fgcolor, uint16_t bgcolor)`
 
 ### Fill anything
  
