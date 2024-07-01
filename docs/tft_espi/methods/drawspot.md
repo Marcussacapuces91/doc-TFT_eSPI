@@ -13,7 +13,7 @@ If `bg_color` is not included the background pixel colour will be read from TFT 
 
     Maths intensive, so for small filled circles only.
 
-Uses [drawWideLine](drawwideline.md).
+Uses [drawWideLine](drawwedgewideline.md).
 
 ## Signature
 

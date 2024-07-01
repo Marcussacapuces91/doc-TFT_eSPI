@@ -61,8 +61,8 @@ title: Class TFT_eSPI
 ### Draw anti-aliased helpers
 
 * [`void drawSpot(float ax, float ay, float r, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF)`](methods/drawspot.md)
-* `void drawWedgeLine(float ax, float ay, float bx, float by, float aw, float bw, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF)`
-* `void drawWideLine(float ax, float ay, float bx, float by, float wd, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF)`
+* [`void drawWedgeLine(float ax, float ay, float bx, float by, float aw, float bw, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF)`](methods/drawwedgewideline.md)
+* [`void drawWideLine(float ax, float ay, float bx, float by, float wd, uint32_t fg_color, uint32_t bg_color = 0x00FFFFFF)`](methods/drawwedgewideline.md)
 
 ### Fill anything
  
