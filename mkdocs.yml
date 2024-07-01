@@ -78,6 +78,7 @@ nav:
       - tft_espi/methods/drawtriangle.md
       - tft_espi/methods/drawwedgewideline.md
       - tft_espi/methods/fillcircle.md
+      - tft_espi/methods/fillcirclehelper.md
       - tft_espi/methods/fillellipse.md
       - tft_espi/methods/fillrect.md
       - tft_espi/methods/fillscreen.md
