@@ -63,6 +63,7 @@ nav:
       - tft_espi/methods/drawbitmap.md
       - tft_espi/methods/drawcentrestring.md
       - tft_espi/methods/drawcircle.md
+      - tft_espi/methods/drawcirclehelper.md
       - tft_espi/methods/drawchar.md
       - tft_espi/methods/drawellipse.md
       - tft_espi/methods/drawfastline.md
@@ -114,4 +115,3 @@ exclude_docs: |
   examples/button.md
   inputs.md
   advanced.md
-  

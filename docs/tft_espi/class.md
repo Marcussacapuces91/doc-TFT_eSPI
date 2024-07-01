@@ -32,7 +32,7 @@ title: Class TFT_eSPI
 * [`int16_t drawChar(uint16_t uniCode, int32_t x, int32_t y)`](methods/drawchar.md)
 * [`int16_t drawChar(uint16_t uniCode, int32_t x, int32_t y, uint8_t font)`](methods/drawchar.md)
 * [`void drawCircle(int32_t x, int32_t y, int32_t r, uint32_t color)`](methods/drawcircle.md)
-* `void drawCircleHelper(int32_t x, int32_t y, int32_t r, uint8_t cornername, uint32_t color)`
+* [`void drawCircleHelper(int32_t x, int32_t y, int32_t r, uint8_t cornername, uint32_t color)`](methods/drawcirclehelper.md)
 * [`void drawEllipse(int16_t x, int16_t y, int32_t rx, int32_t ry, uint16_t color)`](methods/drawellipse.md)
 * [`void drawFastVLine(int32_t x, int32_t y, int32_t h, uint32_t color)`](methods/drawfastline.md)
 * [`void drawFastHLine(int32_t x, int32_t y, int32_t w, uint32_t color)`](methods/drawfastline.md)
