@@ -72,6 +72,7 @@ nav:
       - tft_espi/methods/drawpixel.md
       - tft_espi/methods/drawrect.md
       - tft_espi/methods/drawrightstring.md
+      - tft_espi/methods/drawspot.md
       - tft_espi/methods/drawstring.md
       - tft_espi/methods/drawtriangle.md
       - tft_espi/methods/fillcircle.md
