@@ -73,7 +73,7 @@ title: Class TFT_eSPI
 * [`void fillRectVGradient(int16_t x, int16_t y, int16_t w, int16_t h, uint32_t color1, uint32_t color2)`](methods/fillrectgradient.md)
 * [`void fillRectHGradient(int16_t x, int16_t y, int16_t w, int16_t h, uint32_t color1, uint32_t color2)`](methods/fillrectgradient.md)
 * [`void fillRoundRect(int32_t x, int32_t y, int32_t w, int32_t h, int32_t radius, uint32_t color)`](methods/fillrect.md)
-* `void fillSmoothCircle(int32_t x, int32_t y, int32_t r, uint32_t color, uint32_t bg_color = 0x00FFFFFF)`
+* [`void fillSmoothCircle(int32_t x, int32_t y, int32_t r, uint32_t color, uint32_t bg_color = 0x00FFFFFF)`](methods/fillcircle.md)
 * [`void fillSmoothRoundRect(int32_t x, int32_t y, int32_t w, int32_t h, int32_t radius, uint32_t color, uint32_t bg_color = 0x00FFFFFF)`](methods/fillrect.md)
 * [`void fillScreen(uint32_t color)`](methods/fillscreen.md)
 * [`void fillTriangle(int32_t x1,int32_t y1, int32_t x2,int32_t y2, int32_t x3,int32_t y3, uint32_t color)`](methods/filltriangle.md)
