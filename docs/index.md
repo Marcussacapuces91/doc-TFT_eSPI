@@ -2,6 +2,9 @@
 title: Welcome to TFT_eSPI's documentation!
 ---
 
+Last compilation status:
+[![compilation passing or not](https://readthedocs.org/projects/doc-tft-espi/badge/)](https://app.readthedocs.org/projects/doc-tft-espi/)
+
 [TFT_eSPI](https://github.com/Bodmer/TFT_eSPI) is a C library that, as indicated on its GitHub page, is a library 
 compatible with Arduino and PlatformIO IDEs, optimized for Raspberry Pi Pico (RP2040), STM32, ESP8266, and ESP32, which
 supports different screen drivers.
