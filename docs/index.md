@@ -15,5 +15,5 @@ on what works and what doesn't, so we can improve this documentation together.
 
     This project is under active development. Your help is desperately needed!
 
-    * Fork me on [github.com/Marcussacapuces91/doc-TFT_eSPI](https://github.com/Marcussacapuces91/doc-TFT_eSPI)
-    * Support on [Tipeee.com](https://fr.tipeee.com/marcussacapuces91)
+* Fork me on [github.com/Marcussacapuces91/doc-TFT_eSPI](https://github.com/Marcussacapuces91/doc-TFT_eSPI)
+* Support on [Tipeee.com](https://fr.tipeee.com/marcussacapuces91)
