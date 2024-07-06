@@ -112,8 +112,8 @@ title: Class TFT_eSPI
 
 * [`void setCursor(int16_t x, int16_t y)`](methods/setcursor.md)
 * [`void setCursor(int16_t x, int16_t y, uint8_t font)`](methods/setcursor.md)
-* `int16_t  getCursorX(void)`
-* `int16_t  getCursorY(void)`
+* [`int16_t getCursorX(void)`](methods/getcursor.md)
+* [`int16_t getCursorY(void)`](methods/getcursor.md)
 
 ### Alignment / Datum
 
