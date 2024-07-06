@@ -1,5 +1,5 @@
 ---
-title: TFT_eSPI::getCursor 
+title: TFT_eSPI::getCursorX & TFT_eSPI::getCursorY 
 ---
 
 ## Description
