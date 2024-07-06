@@ -8,8 +8,9 @@ Draw a filled circle or an anti-aliased filled circle.
 
 ## Signature
 
-`void TFT_eSPI::fillCircle(int32_t x, int32_t y, int32_t r, uint32_t color)`
-`void TFT_eSPI::fillCircle(int32_t x, int32_t y, int32_t r, uint32_t color, uint32_t bg_color = 0x00FFFFFF)`
+* `void TFT_eSPI::fillCircle(int32_t x, int32_t y, int32_t r, uint32_t color)`
+* `void TFT_eSPI::fillCircle(int32_t x, int32_t y, int32_t r, uint32_t color, uint32_t bg_color = 0x00FFFFFF)`
+* `void TFT_eSPI::fillSmoothCircle(int32_t x, int32_t y, int32_t r, uint32_t color, uint32_t bg_color)`
 
 ## Parameters
 
