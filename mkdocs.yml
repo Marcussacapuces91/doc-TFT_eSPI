@@ -81,6 +81,7 @@ nav:
       - tft_espi/methods/fillcirclehelper.md
       - tft_espi/methods/fillellipse.md
       - tft_espi/methods/fillrect.md
+      - tft_espi/methods/fillrectgradient.md
       - tft_espi/methods/fillscreen.md
       - tft_espi/methods/filltriangle.md
       - tft_espi/methods/gettextdatum.md
