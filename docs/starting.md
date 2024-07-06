@@ -39,16 +39,16 @@ Optimised drivers have been tested with the following processors:
 
 The library supports the following interface types for these processors:
 
- Processor | 4 wire SPI | 8-bit parallel | 16-bit parallel | DMA support
------------|------------|----------------|-----------------|----------------
- RP2040    | Yes        | Yes            | Yes             | Yes (all)
- ESP32     | Yes        | Yes            | No              | Yes (SPI only)
- ESP32 C3  | Yes        | No             | No              | No
- ESP32 S2  | Yes        | No             | No              | No
- ESP32 S3  | Yes        | Yes            | No              | Yes (SPI only)
- ESP8266   | Yes        | No             | No              | No
- STM32Fxxx | Yes        | Yes            | No              | Yes (SPI only)
- Other     | Yes        | No             | No              | No
+| Processor  | 4 wire SPI | 8-bit parallel | 16-bit parallel | DMA support    |
+|------------|------------|----------------|-----------------|----------------|
+| RP2040     | Yes        | Yes            | Yes             | Yes (all)      |
+| ESP32      | Yes        | Yes            | No              | Yes (SPI only) |
+| ESP32 C3   | Yes        | No             | No              | No             |
+| ESP32 S2   | Yes        | No             | No              | No             |
+| ESP32 S3   | Yes        | Yes            | No              | Yes (SPI only) |
+| ESP8266    | Yes        | No             | No              | No             |
+| STM32Fxxx  | Yes        | Yes            | No              | Yes (SPI only) |
+| Other      | Yes        | No             | No              | No             |
 
 For other (generic) processors only SPI interface displays are supported and the slower Arduino SPI library functions
 are used by the library. Higher clock speed processors such as used for the Teensy 3.x and 4.x boards will still provide
@@ -166,4 +166,4 @@ void loop() {
 ```
 
 This code sets up two chip select pins, one for each display, and then sets both pins low to write to both displays at
-once. The `tft.drawString` function is then used to write a string to both displays.
+once. The [`tft.drawString`](tft_espi/methods/drawstring.md) function is then used to write a string to both displays.
