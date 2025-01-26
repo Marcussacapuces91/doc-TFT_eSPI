@@ -22,11 +22,28 @@ Draw a rectangle outline or a rounded corner rectangle outline or an anti-aliase
 * `ìnt32_t` h: rectangle height.
 * `int32_t` r: rounded radius.
 * `uìnt32_t` [color](../colors.md): line color.
-* `int32_t` ir: inner corne radius.
+* `int32_t` ir: inner corner radius.
 * `uìnt32_t` [fg_color](../colors.md): line color.
 * `uìnt32_t` [bg_color](../colors.md): background color (default to 0x00FFFFFF); If `bg_color` is not included the background
     pixel colour will be read from TFT or sprite.
-* `uint8_t` quadrants: default to 0xF; ?? What is that for ??
+* `uint8_t` quadrants: default to 0xF.
+
+!!! note "drawSmoothRoundRect"
+
+    * x,y is top left corner of bounding box for a complete rounded rectangle
+    * r = arc outer corner radius, ir = arc inner radius. Arc thickness = r-ir+1
+    * w and h are width and height of the bounding rectangle
+    * If w and h are < radius (e.g. 0,0) a circle will be drawn with centre at x+r,y+r
+    * Arc foreground fg_color anti-aliased with background colour at edges
+    * A subset of corners can be drawn by specifying a quadrants mask. A bit set in the
+        mask means draw that quadrant (all are drawn if parameter missing):
+
+        Arc quadrant mask select bits (as in [drawCircleHelper](drawcirclehelper.md) function)
+
+        |            | left  | right |
+        |------------|-------|-------|
+        | **top**    | 0x1   | 0x2   |
+        | **bottom** | 0x8   | 0x4   |
 
 ## Result
 
@@ -47,8 +64,8 @@ void setup() {
 }
 
 void loop() {
-  // Draw a rectangle with a red border and a yellow fill
-  tft.drawRect(10, 10, 50, 30, TFT_RED, TFT_YELLOW);
+  // Draw a rectangle with a red border
+  tft.drawRect(10, 10, 50, 30, TFT_RED);
   delay(1000);
 }
 ```
@@ -60,7 +77,6 @@ In this example, we use `drawRect` to draw a rectangle with the following parame
 * `width`: 50 (the width of the rectangle)
 * `height`: 30 (the height of the rectangle)
 * `color`: TFT_RED (the color of the border)
-* `fillColor`: TFT_YELLOW (the color of the fill)
 
 **Example 2: `drawRoundRect`**
 
@@ -75,8 +91,8 @@ void setup() {
 }
 
 void loop() {
-  // Draw a rounded rectangle with a blue border and a green fill
-  tft.drawRoundRect(20, 20, 60, 40, 10, TFT_BLUE, TFT_GREEN);
+  // Draw a rounded rectangle with a blue border
+  tft.drawRoundRect(20, 20, 60, 40, 10, TFT_BLUE);
   delay(1000);
 }
 ```
@@ -89,7 +105,6 @@ In this example, we use `drawRoundRect` to draw a rounded rectangle with the fol
 * `height`: 40 (the height of the rectangle)
 * `radius`: 10 (the radius of the rounded corners)
 * `color`: TFT_BLUE (the color of the border)
-* `fillColor`: TFT_GREEN (the color of the fill)
 
 !!! note
 
