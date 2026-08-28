@@ -28,5 +28,6 @@ None.
 <!--
 ## Example
 
-{!docs/examples/helloword.md!}
+{!docs/examples/helloworld.md!}
+
 -->

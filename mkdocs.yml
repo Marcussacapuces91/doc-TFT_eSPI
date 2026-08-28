@@ -114,7 +114,7 @@ nav:
 exclude_docs: |
   examples/getsettextdatum.md
   examples/getsettextpadding.md
-  examples/helloword.md
+  examples/helloworld.md
   examples/button.md
   inputs.md
   advanced.md
